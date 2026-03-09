@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { COLORS } from '../theme/theme';
 import { 
   FaCode, 
   FaMobile, 
@@ -26,6 +27,8 @@ import budTulips from "../assets/images/budtulips.png";
 import gurukulERPImg from "../assets/images/gurukulerp.png";
 import billingSoftImg from "../assets/images/billingsoftware1.jpeg";
 import AIFeatures from '../components/AIFeatures';
+import HeroCarousel from '../components/HeroCarousel';
+import CompanySection from '../components/CompanySection';
 
 const Home = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -177,50 +180,12 @@ const products = [
 
   return (
     <div className="home">
-     {/* Hero Section */}
-<section className="hero">
-  {/* Background Video */}
-  <video autoPlay loop muted playsInline className="hero-video">
-    <source src={require("../assets/images/Coding.gif")} type="video/mp4" />
-  </video>
-
-  {/* Overlay */}
-  <div className="hero-overlay"></div>
-
-  <div className="container">
-    <div className="hero-slide single">
-      <div className="hero-content" data-aos="fade-up">
-        <h4>AI • Web • Mobile • Cloud</h4>
-        <h1>
-          We Build <span className="gradient-text">Smart Digital Products</span>
-        </h1>
-        <p>
-          Transform your ideas into scalable software solutions with modern
-          technologies and innovative thinking.
-        </p>
-
-        <div className="hero-buttons">
-          <Link to="/services" className="btn btn-primary">
-            Explore Services
-          </Link>
-          <Link to="/contact" className="btn btn-outline">
-            Get Free Consultation
-          </Link>
-        </div>
-
-        {/* Floating Tech Stack */}
-        <div className="tech-stack">
-          <span>React</span>
-          <span>Node.js</span>
-          <span>AI</span>
-          <span>Cloud</span>
-          <span>DevOps</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+       <section>
+        <div className="pt-20">
+  <HeroCarousel />
+  <CompanySection />
+</div>
+       </section>
 
       {/* Info Cards */}
       <section className="section">

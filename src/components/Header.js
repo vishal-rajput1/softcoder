@@ -13,7 +13,7 @@ import {
   FaBars,
 } from "react-icons/fa";
 
-import logo from "../assets/images/logo.png";
+import softcoders from "../assets/images/mercedes-benz.jpg"
 import { COLORS } from "../theme/theme.js";
 
 const Header = () => {
@@ -33,8 +33,8 @@ const Header = () => {
 
   const isActive = (path) =>
     location.pathname === path
-      ? { color: COLORS.accent }
-      : { color: COLORS.light };
+      ? { color: COLORS.dark }
+      : { color: COLORS.primary };
 
   return (
     <header className="w-full fixed top-0 z-50">
@@ -51,37 +51,37 @@ const Header = () => {
           transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
         >
           <Link to="/career" className="flex items-center gap-2">
-            <FaBriefcase style={{ color: COLORS.accent }} />
+            <FaBriefcase style={{ color: COLORS.primary }} />
             We Are Hiring Developers
           </Link>
 
           <Link to="/services" className="flex items-center gap-2">
-            <FaLaptopCode style={{ color: COLORS.accent }} />
+            <FaLaptopCode style={{ color: COLORS.primary }} />
             Web Development • Mobile Apps • UI/UX
           </Link>
 
           <Link to="/portfolio" className="flex items-center gap-2">
-            <FaProjectDiagram style={{ color: COLORS.accent }} />
+            <FaProjectDiagram style={{ color: COLORS.primary }} />
             100+ Successful Projects Delivered
           </Link>
 
           <a href="mailto:Info@softcoders.in" className="flex items-center gap-2">
-            <FaEnvelope style={{ color: COLORS.accent }} />
+            <FaEnvelope style={{ color: COLORS.primary }} />
             Info@softcoders.in
           </a>
 
           <a href="tel:+918295000455" className="flex items-center gap-2">
-            <FaPhone style={{ color: COLORS.accent }} />
+            <FaPhone style={{ color: COLORS.primary }} />
             +91-8295000455
           </a>
 
           <Link to="/about" className="flex items-center gap-2">
-            <FaUsers style={{ color: COLORS.accent }} />
+            <FaUsers style={{ color: COLORS.primary }} />
             Trusted by Businesses Worldwide
           </Link>
 
           <Link to="/contact" className="flex items-center gap-2">
-            <FaBullhorn style={{ color: COLORS.accent }} />
+            <FaBullhorn style={{ color: COLORS.primary }} />
             Get Your Website or App Built Today
           </Link>
         </motion.div>
@@ -91,7 +91,7 @@ const Header = () => {
       <nav
         className="transition-all duration-300"
         style={{
-          background: COLORS.dark,
+          background: COLORS.white,
           backdropFilter: isScrolled ? "blur(10px)" : "none",
         }}
       >
@@ -99,7 +99,7 @@ const Header = () => {
 
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="SoftCoders Logo" className="h-10" />
+            <img src={softcoders} alt="SoftCoders Logo" className="h-10" />
           </Link>
 
           {/* Desktop Menu */}
@@ -115,8 +115,8 @@ const Header = () => {
               <Link
                 to="/contact"
                 style={{
-                  background: COLORS.accent,
-                  color: COLORS.dark,
+                  background: COLORS.dark,
+                  color: COLORS.white,
                 }}
                 className="px-5 py-2 rounded-full transition"
               >
@@ -143,7 +143,7 @@ const Header = () => {
             className="md:hidden px-6 pb-6"
             style={{ background: COLORS.dark }}
           >
-            <ul className="flex flex-col gap-4" style={{ color: COLORS.light }}>
+            <ul className="flex flex-col gap-4" style={{ color: COLORS.dark }}>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/services">Services</Link></li>
@@ -155,8 +155,8 @@ const Header = () => {
                 <Link
                   to="/contact"
                   style={{
-                    background: COLORS.accent,
-                    color: COLORS.dark,
+                    background: COLORS.dark,
+                    color: COLORS.white,
                   }}
                   className="px-4 py-2 rounded-lg inline-block"
                 >
