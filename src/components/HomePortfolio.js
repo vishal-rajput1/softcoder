@@ -2,7 +2,11 @@ import { COLORS } from "../theme/theme";
 import kingsprinter from "../assets/images/kingsprinter.png";
 import budTulips from "../assets/images/budtulips.png";
 import hsfFoods from "../assets/images/hsffoods.png";
+import { Autoplay, Navigation } from "swiper/modules";
+import "swiper/css/navigation";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const HomePortfolio = () => {
 
@@ -47,23 +51,63 @@ return (
 Our Projects
 </h2>
 
-<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<Swiper
+modules={[Autoplay, Navigation]}
+navigation
+autoplay={{delay:3000}}
+spaceBetween={30}
+slidesPerView={3}
+loop={true}
+breakpoints={{
+0:{slidesPerView:1},
+768:{slidesPerView:2},
+1024:{slidesPerView:3}
+}}
+>
 
 {portfolio.map(item => (
 
-<div key={item.id} style={{boxShadow:"0 10px 25px rgba(0,0,0,0.08)",borderRadius:"10px"}}>
+<SwiperSlide key={item.id}>
+  <div
+    style={{
+      position: "relative",
+      borderRadius: "10px",
+      overflow: "hidden",
+      boxShadow: "0 10px 25px rgba(0,0,0,0.08)"
+    }}
+  >
+    
+    <img
+      src={item.image}
+      alt={item.title}
+      style={{
+        width: "100%",
+        height: "250px",
+        objectFit: "cover"
+      }}
+    />
 
-<img src={item.image} alt="" style={{borderRadius:"10px 10px 0 0"}}/>
+    {/* Transparent Overlay */}
+    <div
+      style={{
+        position: "absolute",
+        bottom: "0",
+        left: "0",
+        width: "100%",
+        padding: "20px",
+        background: "rgba(0,0,0,0.45)",
+        color: "#fff"
+      }}
+    >
+      <h4 style={{ margin: 0 }}>{item.title}</h4>
+    </div>
 
-<div style={{padding:"20px"}}>
-<h4>{item.title}</h4>
-</div>
-
-</div>
+  </div>
+</SwiperSlide>
 
 ))}
 
-</div>
+</Swiper>
 
 </div>
 </section>
