@@ -6,11 +6,7 @@
 --accent-color:#ec4899;
 
 --dark-color:#0f172a;
-<<<<<<< HEAD
---light-color:#f8fafc;
-=======
 --light-color:#c7d2dc;
->>>>>>> main
 --text-color:#1e293b;
 
 --white:#ffffff;
@@ -997,8 +993,6 @@ width:100%;
   }
 }
 
-<<<<<<< HEAD
-=======
 /* ================= AI SECTION RESPONSIVE ================= */
 
 @media (max-width: 1024px) {
@@ -1207,7 +1201,6 @@ h2{font-size:1.8rem;}
 h3{font-size:1.5rem;}
 
 }
->>>>>>> main
 .services-section{
   padding:80px 0;
   background:#f8fafc;
@@ -1373,8 +1366,4 @@ h3{font-size:1.5rem;}
   color:#666;
   line-height:1.7;
   margin-bottom:30px;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> main

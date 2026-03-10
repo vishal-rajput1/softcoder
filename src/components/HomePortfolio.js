@@ -2,6 +2,8 @@ import { COLORS } from "../theme/theme";
 import kingsprinter from "../assets/images/kingsprinter.png";
 import budTulips from "../assets/images/budtulips.png";
 import hsfFoods from "../assets/images/hsffoods.png";
+import { Autoplay, Navigation } from "swiper/modules";
+import "swiper/css/navigation";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -50,6 +52,9 @@ Our Projects
 </h2>
 
 <Swiper
+modules={[Autoplay, Navigation]}
+navigation
+autoplay={{delay:3000}}
 spaceBetween={30}
 slidesPerView={3}
 loop={true}
@@ -63,27 +68,41 @@ breakpoints={{
 {portfolio.map(item => (
 
 <SwiperSlide key={item.id}>
+  <div
+    style={{
+      position: "relative",
+      borderRadius: "10px",
+      overflow: "hidden",
+      boxShadow: "0 10px 25px rgba(0,0,0,0.08)"
+    }}
+  >
+    
+    <img
+      src={item.image}
+      alt={item.title}
+      style={{
+        width: "100%",
+        height: "250px",
+        objectFit: "cover"
+      }}
+    />
 
-<div
-style={{
-boxShadow:"0 10px 25px rgba(0,0,0,0.08)",
-borderRadius:"10px",
-overflow:"hidden"
-}}
->
+    {/* Transparent Overlay */}
+    <div
+      style={{
+        position: "absolute",
+        bottom: "0",
+        left: "0",
+        width: "100%",
+        padding: "20px",
+        background: "rgba(0,0,0,0.45)",
+        color: "#fff"
+      }}
+    >
+      <h4 style={{ margin: 0 }}>{item.title}</h4>
+    </div>
 
-<img
-src={item.image}
-alt={item.title}
-style={{width:"100%"}}
-/>
-
-<div style={{padding:"20px"}}>
-<h4>{item.title}</h4>
-</div>
-
-</div>
-
+  </div>
 </SwiperSlide>
 
 ))}
