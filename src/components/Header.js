@@ -103,7 +103,7 @@ Get Your Website Built Today
 <nav
 className="transition-all duration-300"
 style={{
-background:COLORS.white,
+background:COLORS.light,
 backdropFilter:isScrolled ? "blur(10px)" : "none"
 }}
 >
