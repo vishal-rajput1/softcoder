@@ -1,8 +1,9 @@
-
 import { COLORS } from "../theme/theme";
 import kingsprinter from "../assets/images/kingsprinter.png";
 import budTulips from "../assets/images/budtulips.png";
 import hsfFoods from "../assets/images/hsffoods.png";
+
+
 const HomePortfolio = () => {
 
 const portfolio = [
@@ -20,6 +21,21 @@ image:budTulips
 id:3,
 title:"HSF Foods",
 image:hsfFoods
+},
+{
+id:4,
+title:"E-Commerce Website",
+image:kingsprinter
+},
+{
+id:5,
+title:"Restaurant Management System",
+image:hsfFoods
+},
+{
+id:6,
+title:"School ERP System",
+image:budTulips
 }
 ];
 
