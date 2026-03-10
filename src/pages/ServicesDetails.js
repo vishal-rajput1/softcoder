@@ -46,7 +46,6 @@ const ServiceDetails = () => {
               Start Your Project
             </Link>
           </div>
-
         </div>
       </section>
 
@@ -103,12 +102,12 @@ const ServiceDetails = () => {
 
       {/* FEATURES */}
 
-      <section style={{ background: "#f8f9fa", padding: "60px 0" }}>
+      <section className="section" style={{ background: "var(--light-color)" }}>
         <div className="container">
 
           <h2>What We Offer</h2>
 
-          <ul style={{ marginTop: "20px", lineHeight: "1.8" }}>
+          <ul style={{ marginTop: "20px" }}>
             {service.features.map((feature, index) => (
               <li key={index} style={{ marginBottom: "10px" }}>
                 ✔ {feature}
@@ -122,106 +121,24 @@ const ServiceDetails = () => {
 
       {/* TECHNOLOGIES */}
 
-      <section style={{ padding: "70px 0" }}>
+      <section className="section">
         <div className="container">
 
-          {/* Title */}
+          <h2>Technologies We Use</h2>
 
-          <div style={{ textAlign: "center", marginBottom: "40px" }}>
-
-            <p
-              style={{
-                color: "#6c63ff",
-                fontWeight: "600",
-                letterSpacing: "1px",
-                textTransform: "uppercase"
-              }}
-            >
-              Our Stack
-            </p>
-
-            <h2>Technologies That Power Our Solutions</h2>
-
-            <p
-              style={{
-                maxWidth: "600px",
-                margin: "10px auto",
-                color: "#666"
-              }}
-            >
-              We use modern technologies to build scalable, secure
-              and high-performance applications.
-            </p>
-
-          </div>
-
-
-          {/* Scrollable Cards */}
-
-          <div
-            style={{
-              display: "flex",
-              gap: "25px",
-              overflowX: "auto",
-              paddingBottom: "15px",
-              scrollSnapType: "x mandatory"
-            }}
-          >
-
+          <div style={{ display: "flex", gap: "15px", flexWrap: "wrap", marginTop: "20px" }}>
             {service.technologies.map((tech, index) => (
-
-              <div
+              <span
                 key={index}
                 style={{
-                  minWidth: "260px",
-                  background: "#fff",
-                  padding: "35px",
-                  borderRadius: "16px",
-                  textAlign: "center",
-                  boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
-                  scrollSnapAlign: "start",
-                  transition: "0.3s",
-                  cursor: "pointer"
-                }}
-
-                onMouseEnter={(e)=>{
-                  e.currentTarget.style.transform="translateY(-8px)"
-                  e.currentTarget.style.boxShadow="0 20px 50px rgba(0,0,0,0.15)"
-                }}
-
-                onMouseLeave={(e)=>{
-                  e.currentTarget.style.transform="translateY(0)"
-                  e.currentTarget.style.boxShadow="0 10px 30px rgba(0,0,0,0.08)"
+                  padding: "8px 15px",
+                  background: "#eee",
+                  borderRadius: "8px"
                 }}
               >
-
-                <img
-                  src={tech.logo}
-                  alt={tech.name}
-                  style={{
-                    width: "60px",
-                    marginBottom: "15px"
-                  }}
-                />
-
-                <h3 style={{ marginBottom: "10px" }}>
-                  {tech.name}
-                </h3>
-
-                <p
-                  style={{
-                    fontSize: "0.95rem",
-                    color: "#555",
-                    lineHeight: "1.6"
-                  }}
-                >
-                  {tech.description}
-                </p>
-
-              </div>
-
+                {tech}
+              </span>
             ))}
-
           </div>
 
         </div>
