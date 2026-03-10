@@ -12,10 +12,7 @@ import {
 
 import CountUp from "react-countup";
 import { TypeAnimation } from "react-type-animation";
-<<<<<<< HEAD
-=======
 import {COLORS} from "../theme/theme"
->>>>>>> main
 
 const AIFeatures = () => {
 
