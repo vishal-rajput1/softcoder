@@ -4,7 +4,11 @@
   "private": true,
   "dependencies": {
     "aos": "^2.3.4",
+<<<<<<< HEAD
     "framer-motion": "^12.35.0",
+=======
+    "framer-motion": "^12.35.1",
+>>>>>>> main
     "react": "^18.2.0",
     "react-countup": "^6.5.3",
     "react-dom": "^18.2.0",

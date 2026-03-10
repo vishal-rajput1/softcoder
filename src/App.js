@@ -20,7 +20,11 @@ import Products from './pages/Products';
 import ServiceDetails from "./pages/ServicesDetails"
 import "./index.css";
 //data
+<<<<<<< HEAD
 import servicesData from "./data/servicesData"
+=======
+// import servicesData from "./data/servicesData"
+>>>>>>> main
 
 function App() {
   useEffect(() => {

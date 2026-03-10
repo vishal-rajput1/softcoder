@@ -6,7 +6,11 @@
 --accent-color:#ec4899;
 
 --dark-color:#0f172a;
+<<<<<<< HEAD
 --light-color:#f8fafc;
+=======
+--light-color:#c7d2dc;
+>>>>>>> main
 --text-color:#1e293b;
 
 --white:#ffffff;
@@ -993,6 +997,217 @@ width:100%;
   }
 }
 
+<<<<<<< HEAD
+=======
+/* ================= AI SECTION RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+
+  .ai-content{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .ai-features{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .ai-code-box{
+    font-size:13px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .ai-title{
+    font-size:28px;
+  }
+
+  .ai-content{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .ai-features{
+    grid-template-columns:1fr;
+  }
+
+  .ai-feature{
+    gap:12px;
+  }
+
+  .ai-icon{
+    font-size:24px;
+  }
+
+  .ai-code-box{
+    padding:18px;
+    font-size:12px;
+  }
+
+  .ai-stats{
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+  }
+
+  .ai-stats h3{
+    font-size:32px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .ai-title{
+    font-size:24px;
+  }
+
+  .ai-code-box{
+    font-size:11px;
+  }
+
+  .ai-stats{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .ai-stats h3{
+    font-size:28px;
+  }
+
+}
+/* ================= EXTRA RESPONSIVE FIXES ================= */
+
+
+/* LARGE TABLET */
+
+@media (max-width:1024px){
+
+/* Reviews */
+.reviews-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+/* Company logos */
+.company-logos{
+grid-template-columns:repeat(3,1fr);
+}
+
+/* Students section */
+.students-container{
+flex-direction:column;
+text-align:center;
+}
+
+.students-text{
+width:100%;
+}
+
+.students-grid{
+width:100%;
+grid-template-columns:repeat(3,1fr);
+}
+
+/* Typography */
+h1{font-size:2.6rem;}
+h2{font-size:2.2rem;}
+
+}
+
+
+/* TABLET */
+
+@media (max-width:768px){
+
+/* Reviews */
+.reviews-grid{
+grid-template-columns:1fr;
+}
+
+/* Company logos */
+.company-logos{
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+}
+
+/* Students section */
+.students-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+/* Hero */
+.hero-content h1{
+font-size:2.2rem;
+}
+
+.hero-buttons{
+flex-direction:column;
+align-items:center;
+}
+
+/* Containers spacing */
+.section{
+padding:60px 0;
+}
+
+/* Contact form */
+.contact-form{
+padding:25px;
+}
+
+}
+
+
+/* MOBILE */
+
+@media (max-width:480px){
+
+/* Company logos */
+.company-logos{
+grid-template-columns:1fr;
+}
+
+/* Students */
+.students-grid{
+grid-template-columns:1fr;
+}
+
+/* Reviews */
+.review-card{
+padding:22px;
+}
+
+/* Blog */
+.blog-image img{
+height:200px;
+}
+
+/* Portfolio */
+.portfolio-item img{
+height:200px;
+}
+
+/* About features */
+.about-features{
+grid-template-columns:1fr;
+}
+
+/* Buttons */
+.btn{
+padding:10px 18px;
+font-size:14px;
+}
+
+/* Headings */
+h1{font-size:2rem;}
+h2{font-size:1.8rem;}
+h3{font-size:1.5rem;}
+
+}
+>>>>>>> main
 .services-section{
   padding:80px 0;
   background:#f8fafc;
@@ -1158,4 +1373,8 @@ width:100%;
   color:#666;
   line-height:1.7;
   margin-bottom:30px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main
