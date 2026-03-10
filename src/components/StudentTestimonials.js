@@ -1,61 +1,176 @@
 import React from "react";
 
-import student1 from "../assets/images/student1.avif";
-import student2 from "../assets/images/student2.avif";
-import student3 from "../assets/images/student3.webp";
-import student4 from "../assets/images/student4.jpg";
-// import student5 from "../images/student5.jpg";
-// import student6 from "../images/student6.jpg";
-// import student7 from "../images/student7.jpg";
-// import student8 from "../images/student8.jpg";
-// import student9 from "../images/student9.jpg";
-
 const StudentTestimonials = () => {
-  const students = [
-    { img: student1, company: "Microsoft" },
-    { img: student2, company: "Goldman Sachs" },
-    { img: student3, company: "Google" },
-    { img: student4, company: "Google" },
-    { img: student1, company: "Amazon" },
-    { img: student2, company: "Samsung" },
-    { img: student3, company: "PayPal" },
-    { img: student4, company: "Amazon" },
-    { img: student2, company: "JPMorgan" }
-  ];
 
-  return (
-    <section className="students-section">
-      <div className="container students-container">
+const students = [
+{
+img:"https://randomuser.me/api/portraits/men/32.jpg",
+company:"Microsoft"
+},
+{
+img:"https://randomuser.me/api/portraits/women/44.jpg",
+company:"Google"
+},
+{
+img:"https://randomuser.me/api/portraits/men/55.jpg",
+company:"Amazon"
+},
+{
+img:"https://randomuser.me/api/portraits/women/68.jpg",
+company:"Goldman Sachs"
+},
+{
+img:"https://randomuser.me/api/portraits/men/41.jpg",
+company:"PayPal"
+},
+{
+img:"https://randomuser.me/api/portraits/women/22.jpg",
+company:"Samsung"
+},
+{
+img:"https://randomuser.me/api/portraits/men/76.jpg",
+company:"JPMorgan"
+},
+{
+img:"https://randomuser.me/api/portraits/women/15.jpg",
+company:"Meta"
+},
+{
+img:"https://randomuser.me/api/portraits/men/83.jpg",
+company:"Netflix"
+}
+];
 
-        {/* LEFT TEXT */}
-        <div className="students-text">
-          <h2>
-            Hear from our <span>students..</span>
-          </h2>
+return (
 
-          <p>
-            From product based companies, startups to fintech firms &
-            service based orgs - our students are everywhere.
-          </p>
+<section
+style={{
+padding:"100px 0",
+background:"#f8fafc"
+}}
+>
 
-          <button className="testimonial-btn">
-            Read SWE testimonials →
-          </button>
-        </div>
+<div className="container">
 
-        {/* RIGHT GRID */}
-        <div className="students-grid">
-          {students.map((item, index) => (
-            <div className="student-card" key={index}>
-              <img src={item.img} alt="student" />
-              <span className="company-tag">{item.company}</span>
-            </div>
-          ))}
-        </div>
+<div
+style={{
+display:"grid",
+gridTemplateColumns:"1fr 1fr",
+gap:"60px",
+alignItems:"center"
+}}
+>
 
-      </div>
-    </section>
-  );
+{/* LEFT TEXT */}
+
+<div>
+
+<h2
+style={{
+fontSize:"36px",
+marginBottom:"15px"
+}}
+>
+
+Hear from our <span style={{color:"#4f46e5"}}>students</span>
+
+</h2>
+
+<p
+style={{
+color:"#555",
+marginBottom:"25px",
+maxWidth:"420px"
+}}
+>
+
+From product based companies, startups to fintech firms
+and service organizations — our students are placed
+across the tech industry.
+
+</p>
+
+<button
+style={{
+background:"#4f46e5",
+color:"#fff",
+border:"none",
+padding:"12px 22px",
+borderRadius:"6px",
+cursor:"pointer",
+fontWeight:"500"
+}}
+>
+
+Read SWE Testimonials →
+
+</button>
+
+</div>
+
+
+{/* RIGHT GRID */}
+
+<div
+style={{
+display:"grid",
+gridTemplateColumns:"repeat(3,1fr)",
+gap:"20px"
+}}
+>
+
+{students.map((item,index)=>(
+
+<div
+key={index}
+style={{
+background:"#fff",
+borderRadius:"12px",
+padding:"15px",
+textAlign:"center",
+boxShadow:"0 10px 25px rgba(0,0,0,0.08)",
+transition:"0.3s"
+}}
+>
+
+<img
+src={item.img}
+alt="student"
+style={{
+width:"70px",
+height:"70px",
+borderRadius:"50%",
+objectFit:"cover",
+marginBottom:"10px"
+}}
+/>
+
+<span
+style={{
+fontSize:"13px",
+background:"#f1f5f9",
+padding:"4px 10px",
+borderRadius:"20px"
+}}
+>
+
+{item.company}
+
+</span>
+
+</div>
+
+))}
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+);
 };
 
 export default StudentTestimonials;
