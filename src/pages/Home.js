@@ -26,8 +26,6 @@ import Info from "../components/Info";
 import HomePortfolio from "../components/HomePortfolio";
 import ServiceHome from "../components/ServiceHome";
 import HomeProducts from "../components/HomeProducts";
-import Industries from "../components/Industries";
-import Aboutus from "../components/Aboutus";
 
 const Home = () => {
 
@@ -45,7 +43,7 @@ return (
 <Industries/>
 
 <HomePortfolio/>
-<HomeProducts/>
+{/* <HomeProducts/> */}
 
 <Reviews/>
 <AIFeatures/>

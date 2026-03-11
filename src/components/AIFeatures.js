@@ -134,7 +134,6 @@ style={{ whiteSpace: "pre-line", display: "block" }}
             </h3>
             <p className="text-gray-500">Repeat Business</p>
           </div>
-
           <div>
             <h3
               className="text-3xl md:text-4xl font-bold mb-2"
