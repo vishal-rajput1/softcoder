@@ -19,8 +19,7 @@ import Contact from './pages/Contact';
 import Products from './pages/Products';
 import ServiceDetails from "./pages/ServicesDetails"
 import "./index.css";
-//data
-import servicesData from "./data/servicesData"
+
 
 function App() {
   useEffect(() => {

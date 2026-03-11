@@ -178,13 +178,16 @@ const Services = () => {
             {services.map((service, index) => (
 
               <div
-                key={index}
-                className="service-card"
-                style={{
-                  padding: "35px",
-                  borderRadius: "18px"
-                }}
-              >
+                 key={index}
+                 className="service-card"
+                    style={{
+                    padding: "35px",
+                    borderRadius: "18px",
+                    display: "flex",
+                    flexDirection: "column",
+                    height: "100%"
+                         }}
+                   >
 
                 <div
                   style={{
@@ -224,12 +227,13 @@ const Services = () => {
 
                 {/* KNOW MORE BUTTON */}
 
-                <div style={{ marginTop: "15px" }}>
+                <div style={{ marginTop: "auto", paddingTop: "15px" }}>
                   <Link
-                    to={`/services/${service.title
-                      .toLowerCase()
-                      .replace(/\s+/g, "-")}`}
-                    className="btn btn-outline-primary"
+                   to={`/services/${service.title
+  .toLowerCase()
+  .replace(/&/g, "")
+  .replace(/\s+/g, "-")}`}
+                    className="btn btn-primary"
                   >
                     Know More
                   </Link>
@@ -297,60 +301,7 @@ const Services = () => {
       </section>
 
 
-      {/* WHY CHOOSE */}
-
-      <section className="section">
-
-        <div className="container">
-
-          <div className="about-content">
-
-            <div className="about-image">
-              <img
-                src={aboutus}
-                alt="Our team"
-                style={{
-                  borderRadius: "18px",
-                  boxShadow: "0 20px 40px rgba(0,0,0,0.15)"
-                }}
-              />
-            </div>
-
-            <div className="about-text">
-
-              <h2>Why Businesses Choose Softcoders</h2>
-
-              <p>
-                Our experienced engineers, designers, and strategists
-                collaborate to create digital solutions that deliver real results.
-              </p>
-
-              <div className="stats-grid">
-
-                <div className="stat-item">
-                  <h4>10+</h4>
-                  <p>Years Experience</p>
-                </div>
-
-                <div className="stat-item">
-                  <h4>500+</h4>
-                  <p>Projects Delivered</p>
-                </div>
-
-                <div className="stat-item">
-                  <h4>100%</h4>
-                  <p>Client Satisfaction</p>
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
+      
 
 
       {/* CTA */}

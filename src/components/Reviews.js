@@ -34,42 +34,47 @@ const reviews = [
   },
 ];
 return (
-<section className="reviews-section">
-  <div className="container">
 
-    <div className="reviews-title">
-      <h2>What Clients Are Saying About Us</h2>
-      <p>
-        We've served more than 350+ clients globally in the last 8+ years
-        and retained 95% of them.
-      </p>
-    </div>
+  <section className="reviews-section">
+    <div className="container">
 
-    <div className="reviews-grid">
-      {reviews.map((review) => (
-        <div className="review-card" key={review.id}>
+      <div className="reviews-title">
+        <h2>What Clients Are Saying About Us</h2>
+        <p>
+          We've served more than 350+ clients globally in the last 8+ years
+          and retained 95% of them.
+        </p>
+      </div>
 
-          <div className="quote-icon">❝</div>
-
-          <div className="stars">
-            {"⭐".repeat(review.rating)}
+  <div className="reviews-grid">
+    {reviews.map((review, index) => (
+      <div className="review-card" key={review.id} data-aos="fade-up" data-aos-delay={index * 120}>
+        
+        <div className="review-top">
+          <div className="review-stars">
+            {"★".repeat(review.rating)}
           </div>
-
-          <p className="review-text">{review.review}</p>
-
-          <div className="review-footer">
-            <div>
-              <h4>{review.name}</h4>
-              <span>{review.company}</span>
-            </div>
-          </div>
-
         </div>
-      ))}
-    </div>
 
+        <p className="review-text">{review.review}</p>
+
+        <div className="review-user">
+          <div className="review-avatar">
+            {review.name.charAt(0)}
+          </div>
+
+          <div>
+            <h4>{review.name}</h4>
+            <span>{review.company}</span>
+          </div>
+        </div>
+
+      </div>
+    ))}
   </div>
-</section>
+
+    </div>
+  </section>
 )};
 
 export default Reviews;

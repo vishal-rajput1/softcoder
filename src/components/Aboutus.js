@@ -1,10 +1,33 @@
-{/* ABOUT SECTION */}
+import { 
+  FaCode, 
+  FaMobile, 
+  FaLaptopCode, 
+  FaBullhorn, 
+  FaShoppingCart,
+  FaCheckCircle,
+  FaHeadset,
+  FaPalette,
+  FaDollarSign,
+  FaFilter,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaWhatsapp
+} from 'react-icons/fa';
+
+import aboutus from '../assets/images/aboutusimg copy.avif';
+
+const Aboutus = () => {
+  return (
+
+
+/* ABOUT SECTION */
 
 <section className="about-section">
 
 <div className="container about-wrapper">
 
-{/* LEFT CONTENT */}
+{/*  LEFT CONTENT */} 
 
 <div className="about-content" data-aos="fade-right">
 
@@ -49,7 +72,7 @@ business success.
 </div>
 
 
-{/* RIGHT IMAGE */}
+{/*  RIGHT IMAGE  */}
 
 <div className="about-image" data-aos="fade-left">
 
@@ -60,5 +83,6 @@ business success.
 </div>
 
 </section>
+  )};
 
 export default Aboutus;
