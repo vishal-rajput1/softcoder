@@ -12,6 +12,7 @@ import {
 
 import aboutus from "../assets/images/aboutus.png";
 import StudentTestimonials from "../components/StudentTestimonials";
+import FAQ from "../components/FAQ";
 
 const About = () => {
   return (
@@ -278,7 +279,7 @@ const About = () => {
 
       </section>
 
-      <StudentTestimonials />
+      <FAQ />
 
     </div>
   );

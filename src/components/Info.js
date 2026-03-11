@@ -4,7 +4,7 @@ import {
   FaMapMarkerAlt
 } from "react-icons/fa";
 
-import { COLORS } from "../theme/theme";
+// import { COLORS } from "../theme/theme";
 
 const Info = () => {
   return (

@@ -4,7 +4,7 @@ import {
   FaPhone, 
   FaMapMarkerAlt, 
   FaWhatsapp,
-  FaClock
+  // FaClock
 } from 'react-icons/fa';
 
 const Contact = () => {
