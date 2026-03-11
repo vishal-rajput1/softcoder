@@ -5,6 +5,11 @@ import schoolERP2 from "../assets/images/gurukulerp2.png";
 import billing1 from "../assets/images/billingsoftware1.jpeg";
 import billing2 from "../assets/images/billingsoftware2.jpeg";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+
 const Products = () => {
   const [activeFilter, setActiveFilter] = useState("All");
 
@@ -59,179 +64,139 @@ const Products = () => {
         </div>
       </section>
 
+{/* PRODUCTS */}
 
-      {/* FILTER */}
+<div
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    gap: "60px"
+  }}
+>
 
-      <section className="section">
-        <div className="container">
+{filteredProducts.map((product, index) => (
 
-          <div
-            style={{
-              textAlign: "center",
-              marginBottom: "50px",
-              display: "flex",
-              justifyContent: "center",
-              gap: "10px",
-              flexWrap: "wrap"
-            }}
-          >
-            {["All", "School ERP", "Billing Software"].map((filter) => (
-              <button
-                key={filter}
-                className={`filter-btn ${
-                  activeFilter === filter ? "active" : ""
-                }`}
-                onClick={() => setActiveFilter(filter)}
-                style={{
-                  padding: "10px 24px",
-                  borderRadius: "30px"
-                }}
-              >
-                {filter}
-              </button>
-            ))}
-          </div>
+<div
+  key={product.id}
+  data-aos="fade-up"
+  data-aos-delay={index * 100}
+  style={{
+    display: "grid",
+    gridTemplateColumns: "40% 60%",
+    gap: "40px",
+    alignItems: "center",
+    padding: "40px",
+    borderRadius: "18px",
+    background: "#fff",
+    boxShadow: "0 15px 35px rgba(0,0,0,0.08)"
+  }}
+>
 
+{/* IMAGE LEFT */}
 
-          {/* PRODUCTS */}
+<div>
 
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "80px"
-            }}
-          >
+<Swiper
+modules={[Autoplay, Pagination]}
+pagination={{ clickable: true }}
+autoplay={{ delay: 2500 }}
+spaceBetween={10}
+slidesPerView={1}
+>
 
-            {filteredProducts.map((product, index) => (
+{product.images.map((img, index) => (
 
-              <div
-                key={product.id}
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr",
-                  gap: "40px",
-                  alignItems: "center",
-                  padding: "40px",
-                  borderRadius: "18px",
-                  background: "#fff",
-                  boxShadow: "0 15px 35px rgba(0,0,0,0.08)"
-                }}
-              >
+<SwiperSlide key={index}>
 
-                {/* IMAGES */}
+<img
+  src={img}
+  alt={product.title}
+  style={{
+    width: "100%",
+    height: "280px",
+    objectFit: "cover",
+    borderRadius: "12px"
+  }}
+/>
 
-                <div
-                  style={{
-                    display: "flex",
-                    gap: "15px",
-                    flexWrap: "wrap"
-                  }}
-                >
-                  {product.images.map((img, idx) => (
-                    <img
-                      key={idx}
-                      src={img}
-                      alt={`${product.title} ${idx}`}
-                      style={{
-                        width: "100%",
-                        maxWidth: "280px",
-                        borderRadius: "12px",
-                        boxShadow: "0 10px 20px rgba(0,0,0,0.08)"
-                      }}
-                    />
-                  ))}
-                </div>
+</SwiperSlide>
+
+))}
+
+</Swiper>
+
+</div>
 
 
-                {/* INFO */}
+{/* CONTENT RIGHT */}
 
-                <div>
+<div>
 
-                  <h2
-                    style={{
-                      color: "var(--primary-color)",
-                      marginBottom: "15px"
-                    }}
-                  >
-                    {product.title}
-                  </h2>
+{/* <span
+style={{
+// background:"#000000",
+color:"#060101",
+padding:"5px 14px",
+borderRadius:"20px",
+fontSize:"13px"
+}}
+>
+{product.category}
+</span> */}
 
-                  <p
-                    style={{
-                      lineHeight: "1.8",
-                      fontSize: "1rem"
-                    }}
-                  >
-                    {product.description}
-                  </p>
+<h2 style={{ margin: "15px 0" }}>
+{product.title}
+</h2>
 
-                </div>
-
-              </div>
-
-            ))}
-
-          </div>
-
-        </div>
-      </section>
+<p
+style={{
+lineHeight:"1.8",
+marginBottom:"20px"
+}}
+>
+{product.description}
+</p>
 
 
-      {/* TRUST SECTION */}
+{/* FEATURES */}
 
-      <section
-        className="section"
-        style={{
-          background: "var(--light-color)"
-        }}
-      >
-        <div className="container">
+<ul style={{
+lineHeight:"1.9",
+marginBottom:"25px",
+paddingLeft:"18px"
+}}>
+<li>Cloud Based System</li>
+<li>Role Based Access Control</li>
+<li>Detailed Reports & Analytics</li>
+<li>Secure Database Management</li>
+</ul>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))",
-              gap: "40px",
-              textAlign: "center"
-            }}
-          >
 
-            <div>
-              <h3 style={{ fontSize: "2.5rem", color: "var(--primary-color)" }}>
-                50+
-              </h3>
-              <p>Projects Delivered</p>
-            </div>
+{/* BUTTON */}
 
-            <div>
-              <h3 style={{ fontSize: "2.5rem", color: "var(--primary-color)" }}>
-                30+
-              </h3>
-              <p>Happy Clients</p>
-            </div>
+<button
+style={{
+padding:"12px 26px",
+background:"#4f46e5",
+color:"#fff",
+border:"none",
+borderRadius:"8px",
+cursor:"pointer"
+}}
+>
+View More
+</button>
 
-            <div>
-              <h3 style={{ fontSize: "2.5rem", color: "var(--primary-color)" }}>
-                20+
-              </h3>
-              <p>Team Members</p>
-            </div>
+</div>
 
-            <div>
-              <h3 style={{ fontSize: "2.5rem", color: "var(--primary-color)" }}>
-                10+
-              </h3>
-              <p>Years Experience</p>
-            </div>
+</div>
 
-          </div>
+))}
 
-        </div>
-      </section>
+</div>
 
+
+      
 
       {/* CTA */}
 
