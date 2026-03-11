@@ -1,377 +1,344 @@
-import React, { useState } from 'react';
-import { FaWhatsapp, FaBriefcase, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import React, { useState } from "react";
+import { FaWhatsapp, FaBriefcase, FaMapMarkerAlt, FaClock } from "react-icons/fa";
+import { FaChartLine, FaLaptopCode, FaUsers, FaMoneyBillWave } from "react-icons/fa";
 
 const Career = () => {
 
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    position: '',
-    experience: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    position: "",
+    experience: "",
+    message: ""
   });
 
   const jobOpenings = [
     {
       id: 1,
-      title: 'Senior Web Developer',
-      location: 'Noida, India',
-      type: 'Full-time',
-      experience: '3-5 years',
-      description: 'Looking for an experienced web developer proficient in React, Node.js, and modern web technologies.'
+      title: "Senior Web Developer",
+      location: "Noida, India",
+      type: "Full-time",
+      experience: "3-5 years",
+      description:
+        "Looking for an experienced web developer proficient in React, Node.js, and modern web technologies."
     },
     {
       id: 2,
-      title: 'Mobile App Developer',
-      location: 'Noida, India',
-      type: 'Full-time',
-      experience: '2-4 years',
-      description: 'Seeking a talented mobile app developer with expertise in React Native or Flutter.'
+      title: "Mobile App Developer",
+      location: "Noida, India",
+      type: "Full-time",
+      experience: "2-4 years",
+      description:
+        "Seeking a talented mobile app developer with expertise in React Native or Flutter."
     },
     {
       id: 3,
-      title: 'UI/UX Designer',
-      location: 'Noida, India',
-      type: 'Full-time',
-      experience: '2-3 years',
-      description: 'Creative designer needed with strong portfolio in web and mobile app design.'
+      title: "UI/UX Designer",
+      location: "Noida, India",
+      type: "Full-time",
+      experience: "2-3 years",
+      description:
+        "Creative designer needed with strong portfolio in web and mobile app design."
     },
     {
       id: 4,
-      title: 'Digital Marketing Specialist',
-      location: 'Noida, India',
-      type: 'Full-time',
-      experience: '1-3 years',
-      description: 'Digital marketing expert to manage SEO, social media, and online advertising campaigns.'
+      title: "Digital Marketing Specialist",
+      location: "Noida, India",
+      type: "Full-time",
+      experience: "1-3 years",
+      description:
+        "Digital marketing expert to manage SEO, social media, and online advertising campaigns."
     }
   ];
-
-  const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const phoneNumber = '9671308053';
-
-    const message = `Job Application
-
-Name: ${formData.name}
-Email: ${formData.email}
-Phone: ${formData.phone}
-Position: ${formData.position}
-Experience: ${formData.experience}
-Message: ${formData.message}`;
-
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-    window.open(whatsappUrl, '_blank');
-
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      position: '',
-      experience: '',
-      message: ''
-    });
-  };
 
   return (
     <div className="career-page">
 
-      {/* LOCAL CSS ONLY FOR THIS PAGE */}
-      <style>{`
-      .form-group{
-      display:flex;
-      flex-direction:column;
-      gap:6px;
-      }
+<style>{`
 
-      .form-group label{
-      font-weight:500;
-      }
+/* HERO */
 
-      .form-group input,
-      .form-group select,
-      .form-group textarea{
-      padding:12px 14px;
-      border-radius:8px;
-      border:1px solid #d1d5db;
-      font-size:14px;
-      transition:0.2s;
-      }
-
-      .form-group input:focus,
-      .form-group select:focus,
-      .form-group textarea:focus{
-      outline:none;
-      border-color:var(--primary-color);
-      box-shadow:0 0 0 3px rgba(79,70,229,0.1);
-      }
-      .whatsapp-btn{
-background:#25D366;
-color:white;
-border:none;
-display:inline-flex;
+.hero{
+min-height:65vh;
+padding-top:150px;
+display:flex;
 align-items:center;
-gap:8px;
-padding:12px 22px;
+justify-content:center;
+text-align:center;
+background:linear-gradient(#0f172a);
+color:white;
+}
+
+.hero h1{
+font-size:3rem;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:1.1rem;
+opacity:0.9;
+}
+
+
+/* SECTION */
+
+.section{
+padding:80px 0;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.subtitle{
+color:#6366f1;
+font-weight:600;
+letter-spacing:1px;
+}
+
+.section-title h2{
+font-size:2.2rem;
+margin-top:10px;
+}
+
+
+/* GRID */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+
+/* SERVICE CARD */
+
+.service-card{
+background:white;
+padding:35px;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.35s;
+position:relative;
+overflow:hidden;
+}
+
+.service-card::before{
+content:"";
+position:absolute;
+width:120%;
+height:120%;
+background:linear-gradient(120deg,transparent,rgba(79,70,229,0.08),transparent);
+top:-50%;
+left:-50%;
+transform:rotate(25deg);
+}
+
+.service-card:hover{
+transform:translateY(-8px);
+box-shadow:0 18px 40px rgba(0,0,0,0.15);
+}
+
+.service-card h3{
+margin-bottom:10px;
+font-size:1.3rem;
+}
+
+
+/* JOB INFO */
+
+.job-info{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+font-size:0.9rem;
+color:#6b7280;
+margin-bottom:15px;
+}
+
+.job-info span{
+display:flex;
+align-items:center;
+gap:6px;
+background:#f3f4f6;
+padding:6px 12px;
+border-radius:20px;
+font-size:13px;
+}
+
+
+/* BUTTON */
+
+.btn-primary{
+margin-top:15px;
+display:inline-block;
+padding:10px 20px;
 border-radius:30px;
+background:#4f46e5;
+color:white;
 font-weight:600;
 transition:0.3s;
 }
 
-.whatsapp-btn:hover{
-background:#1ebe5d;
+.btn-primary:hover{
+background:#4338ca;
 transform:translateY(-2px);
-box-shadow:0 8px 18px rgba(0,0,0,0.15);
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
 }
-      `}</style>
 
 
-      {/* HERO */}
+/* RESPONSIVE */
 
-      <section className="hero" style={{ minHeight: '60vh', paddingTop: '150px', textAlign: 'center' }}>
-        <div className="container">
-          <h1>Career Opportunities</h1>
-          <p style={{ maxWidth: '700px', margin: '0 auto' }}>
-            Join our growing team and work on exciting technologies, innovative projects,
-            and meaningful digital solutions.
-          </p>
-        </div>
-      </section>
+@media(max-width:768px){
 
+.hero h1{
+font-size:2.2rem;
+}
 
-      {/* WHY JOIN */}
+.section{
+padding:60px 0;
+}
 
-      <section className="section">
-        <div className="container">
+}
 
-          <div className="section-title">
-            <p className="subtitle">Why Join Us</p>
-            <h2>Build Your Career With Softcoders</h2>
-          </div>
+.icon-box{
+width:55px;
+height:55px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:12px;
+background:linear-gradient(135deg,#6366f1,#4f46e5);
+color:white;
+font-size:22px;
+margin-bottom:15px;
+transition:0.3s;
+}
 
-          <div className="services-grid" style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(250px,1fr))' }}>
+.service-card:hover .icon-box{
+transform:scale(1.1);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
 
-            <div className="service-card">
-              <h3>Career Growth</h3>
-              <p>Work on real-world projects and continuously upgrade your skills.</p>
-            </div>
-
-            <div className="service-card">
-              <h3>Modern Technologies</h3>
-              <p>Exposure to the latest frameworks, tools, and development practices.</p>
-            </div>
-
-            <div className="service-card">
-              <h3>Team Culture</h3>
-              <p>Collaborative work environment with experienced professionals.</p>
-            </div>
-
-            <div className="service-card">
-              <h3>Competitive Salary</h3>
-              <p>Attractive compensation and performance-based growth.</p>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
+`}</style>
 
 
-      {/* OPEN POSITIONS */}
+{/* HERO */}
 
-      <section className="section" style={{ background: 'var(--light-color)' }}>
-        <div className="container">
+<section className="hero">
+<div className="container">
 
-          <div className="section-title">
-            <p className="subtitle">Current Openings</p>
-            <h2>Available Positions</h2>
-          </div>
+<h1>Career Opportunities</h1>
 
-          <div style={{ display: 'grid', gap: '30px' }}>
+<p style={{maxWidth:"700px",margin:"auto"}}>
+Join our growing team and work on exciting technologies, innovative projects,
+and meaningful digital solutions.
+</p>
 
-            {jobOpenings.map((job, index) => (
-
-              <div
-                key={job.id}
-                className="service-card"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-                style={{ textAlign: 'left', padding: '30px' }}
-              >
-
-                <h3 style={{ marginBottom: '10px' }}>{job.title}</h3>
-
-                <div style={{
-                  display: 'flex',
-                  gap: '20px',
-                  flexWrap: 'wrap',
-                  fontSize: '0.9rem',
-                  color: 'var(--gray)',
-                  marginBottom: '15px'
-                }}>
-
-                  <span><FaMapMarkerAlt /> {job.location}</span>
-                  <span><FaClock /> {job.type}</span>
-                  <span><FaBriefcase /> {job.experience}</span>
-
-                </div>
-
-                <p>{job.description}</p>
-
-                <a href="#apply" className="btn btn-primary">
-                  Apply Now
-                </a>
-
-              </div>
-
-            ))}
-
-          </div>
-
-        </div>
-      </section>
+</div>
+</section>
 
 
-      {/* APPLICATION FORM */}
 
-      <section className="section" id="apply">
-        <div className="container">
+{/* WHY JOIN */}
 
-          <div className="section-title">
-         
-            <h2>Submit Your Application</h2>
-          </div>
+<section className="section">
+<div className="container">
 
-          <div style={{
-            maxWidth: '900px',
-            margin: '0 auto',
-            background: '#fff',
-            padding: '50px',
-            borderRadius: '16px',
-            boxShadow: '0 20px 45px rgba(0,0,0,0.08)'
-          }}>
+<div className="section-title">
+<p className="subtitle">Why Join Us</p>
+<h2>Build Your Career With Softcoders</h2>
+</div>
 
-            <form onSubmit={handleSubmit}>
+<div className="services-grid">
 
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                gap: '20px'
-              }}>
+<div className="service-card">
+<div className="icon-box">
+<FaChartLine />
+</div>
+<h3>Career Growth</h3>
+<p>Work on real-world projects and continuously upgrade your skills.</p>
+</div>
 
-                <div className="form-group">
-                  <label>Full Name *</label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    placeholder="Your full name"
-                    required
-                  />
-                </div>
+<div className="service-card">
+<div className="icon-box">
+<FaLaptopCode />
+</div>
+<h3>Modern Technologies</h3>
+<p>Exposure to the latest frameworks and development practices.</p>
+</div>
 
-                <div className="form-group">
-                  <label>Email *</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    placeholder="your@email.com"
-                    required
-                  />
-                </div>
+<div className="service-card">
+<div className="icon-box">
+<FaUsers />
+</div>
+<h3>Team Culture</h3>
+<p>Collaborative work environment with experienced professionals.</p>
+</div>
 
-                <div className="form-group">
-                  <label>Phone *</label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    placeholder="+91"
-                    required
-                  />
-                </div>
+<div className="service-card">
+<div className="icon-box">
+<FaMoneyBillWave />
+</div>
+<h3>Competitive Salary</h3>
+<p>Attractive compensation and performance-based growth.</p>
+</div>
 
-                <div className="form-group">
-                  <label>Position *</label>
-                  <select
-                    name="position"
-                    value={formData.position}
-                    onChange={handleInputChange}
-                    required
-                  >
-                    <option value="">Select Position</option>
+</div>
+</div>
+</section>
 
-                    {jobOpenings.map(job => (
-                      <option key={job.id} value={job.title}>
-                        {job.title}
-                      </option>
-                    ))}
 
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
 
-                <div className="form-group" style={{ gridColumn: '1 / -1' }}>
-                  <label>Years of Experience *</label>
-                  <input
-                    type="text"
-                    name="experience"
-                    value={formData.experience}
-                    onChange={handleInputChange}
-                    placeholder="e.g. 3 years"
-                    required
-                  />
-                </div>
+{/* OPEN POSITIONS */}
 
-                <div className="form-group" style={{ gridColumn: '1 / -1' }}>
-                  <label>Cover Letter / Additional Information</label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    rows="5"
-                    placeholder="Tell us why you'd be a great fit..."
-                  />
-                </div>
+<section className="section" style={{background:"#f9fafb"}}>
+<div className="container">
 
-              </div>
+<div className="section-title">
+<p className="subtitle">Current Openings</p>
+<h2>Available Positions</h2>
+</div>
 
-              <div style={{ textAlign: 'center', marginTop: '30px' }}>
-                <button type="submit" className="btn whatsapp-btn">
-                  <FaWhatsapp /> Submit Application via WhatsApp
-                </button>
-              </div>
+<div style={{display:"grid",gap:"30px"}}>
 
-              <p style={{
-                marginTop: '20px',
-                textAlign: 'center',
-                fontSize: '0.9rem'
-              }}>
-                You can also email your resume to
-                <a href="mailto:Info@softcoders.in"> Info@softcoders.in</a>
-              </p>
+{jobOpenings.map((job,index)=>(
+<div
+key={job.id}
+className="service-card"
+data-aos="fade-up"
+data-aos-delay={index*100}
+style={{textAlign:"left"}}
+>
 
-            </form>
+<h3>{job.title}</h3>
 
-          </div>
+<div className="job-info">
 
-        </div>
-      </section>
+<span><FaMapMarkerAlt/> {job.location}</span>
+<span><FaClock/> {job.type}</span>
+<span><FaBriefcase/> {job.experience}</span>
 
-    </div>
+</div>
+
+<p>{job.description}</p>
+
+<a href="#apply" className="btn-primary">
+Apply Now
+</a>
+
+</div>
+))}
+
+</div>
+
+</div>
+</section>
+
+</div>
   );
 };
 
