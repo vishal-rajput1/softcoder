@@ -19,16 +19,16 @@ import Contact from './pages/Contact';
 import Products from './pages/Products';
 import ServiceDetails from "./pages/ServicesDetails"
 import "./index.css";
-//data
-// import servicesData from "./data/servicesData"
+
 
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
-      once: true,
-      offset: 100
-    });
+  duration: 900,
+  easing: "ease-out-cubic",
+  once: true,
+  offset: 80
+});
   }, []);
 
   return (

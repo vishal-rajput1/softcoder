@@ -15,7 +15,7 @@ import {
   FaChevronDown
 } from "react-icons/fa";
 
-import softcoders from "../assets/images/mercedes-benz.jpg";
+import softcoders from "../assets/images/sclogo.avif";
 import { COLORS } from "../theme/theme";
 
 const Header = () => {

@@ -1,5 +1,21 @@
 import React from "react";
 import { COLORS } from "../theme/theme";
+import { 
+  FaCode, 
+  FaMobile, 
+  FaLaptopCode, 
+  FaBullhorn, 
+  FaShoppingCart,
+  FaCheckCircle,
+  FaHeadset,
+  FaPalette,
+  FaDollarSign,
+  FaFilter,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaWhatsapp
+} from 'react-icons/fa';
 
 import HeroCarousel from "../components/HeroCarousel";
 import CompanySection from "../components/CompanySection";
@@ -9,7 +25,7 @@ import WhyChooseUs from "../components/WhyChooseUs";
 import Info from "../components/Info";
 import HomePortfolio from "../components/HomePortfolio";
 import ServiceHome from "../components/ServiceHome";
-// import HomeProducts from "../components/HomeProducts";
+import HomeProducts from "../components/HomeProducts";
 
 const Home = () => {
 
@@ -22,7 +38,9 @@ return (
 <HeroCarousel/>
 <CompanySection/>
 </section>
-<ServiceHome/>
+{/* <ServiceHome/> */}
+<Aboutus/>
+<Industries/>
 
 <HomePortfolio/>
 {/* <HomeProducts/> */}
