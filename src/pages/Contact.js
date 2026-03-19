@@ -27,7 +27,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const phoneNumber = '9991738162';
+    const phoneNumber = '9254147455';
 
     const message = `Contact Form Submission
 
