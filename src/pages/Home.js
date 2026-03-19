@@ -52,7 +52,33 @@ return (
 <AIFeatures/>
 
 <WhyChooseUs/>
-
+<a
+  href="https://wa.me/9254147455" // 👈 replace with your number (with country code)
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    position: "fixed",
+    bottom: "25px",
+    right: "25px",
+    backgroundColor: "#25D366",
+    color: "#fff",
+    borderRadius: "50%",
+    width: "60px",
+    height: "60px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: "28px",
+    boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+    zIndex: 1000,
+    cursor: "pointer",
+    transition: "transform 0.3s ease"
+  }}
+  onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
+  onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+>
+  <FaWhatsapp />
+</a>
 </div>
 );
 };
