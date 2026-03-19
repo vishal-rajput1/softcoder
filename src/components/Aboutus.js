@@ -1,18 +1,8 @@
 import { 
-  FaCode, 
-  FaMobile, 
-  FaLaptopCode, 
-  FaBullhorn, 
-  FaShoppingCart,
   FaCheckCircle,
   FaHeadset,
   FaPalette,
-  FaDollarSign,
-  FaFilter,
-  FaEnvelope,
-  FaPhone,
-  FaMapMarkerAlt,
-  FaWhatsapp
+  FaDollarSign
 } from 'react-icons/fa';
 
 import aboutus from '../assets/images/aboutusimg copy.avif';
@@ -20,69 +10,62 @@ import aboutus from '../assets/images/aboutusimg copy.avif';
 const Aboutus = () => {
   return (
 
+    <section className="about-section">
 
-/* ABOUT SECTION */
+      <div className="container about-wrapper">
 
-<section className="about-section">
+        {/* LEFT IMAGE */}
+        <div className="about-image" data-aos="fade-left">
+          <img src={aboutus} alt="Client Meeting" />
+        </div>
 
-<div className="container about-wrapper">
+        {/* RIGHT CONTENT */}
+        <div className="about-content" data-aos="fade-right">
 
-{/*  LEFT CONTENT */} 
+          <span className="about-tag">ABOUT US</span>
 
-<div className="about-content" data-aos="fade-right">
+          <h2>
+            We Build Digital Products
+            That Drive Business Growth
+          </h2>
 
-<span className="about-tag">ABOUT US</span>
+          <p className="about-desc">
+            Softcoders helps businesses transform ideas into powerful
+            software solutions. Our team builds modern web applications,
+            mobile apps and scalable platforms designed for long-term
+            business success.
+          </p>
 
-<h2>
-We Build Digital Products
-That Drive Business Growth
-</h2>
+          <div className="about-highlights">
 
-<p className="about-desc">
-Softcoders helps businesses transform ideas into powerful
-software solutions. Our team builds modern web applications,
-mobile apps and scalable platforms designed for long-term
-business success.
-</p>
+            <div className="highlight-item">
+              <FaCheckCircle className="highlight-icon"/>
+              <span>Modern Technologies</span>
+            </div>
 
-<div className="about-highlights">
+            <div className="highlight-item">
+              <FaPalette className="highlight-icon"/>
+              <span>Clean UI / UX Design</span>
+            </div>
 
-<div className="highlight-item" data-aos="fade-up" data-aos-delay="100">
-<FaCheckCircle className="highlight-icon"/>
-<span>Modern Technologies</span>
-</div>
+            <div className="highlight-item">
+              <FaDollarSign className="highlight-icon"/>
+              <span>Affordable Development</span>
+            </div>
 
-<div className="highlight-item" data-aos="fade-up" data-aos-delay="200">
-<FaPalette className="highlight-icon"/>
-<span>Clean UI / UX Design</span>
-</div>
+            <div className="highlight-item">
+              <FaHeadset className="highlight-icon"/>
+              <span>24/7 Client Support</span>
+            </div>
 
-<div className="highlight-item" data-aos="fade-up" data-aos-delay="300">
-<FaDollarSign className="highlight-icon"/>
-<span>Affordable Development</span>
-</div>
+          </div>
 
-<div className="highlight-item" data-aos="fade-up" data-aos-delay="400">
-<FaHeadset className="highlight-icon"/>
-<span>24/7 Client Support</span>
-</div>
+        </div>
 
-</div>
+      </div>
 
-</div>
-
-
-{/*  RIGHT IMAGE  */}
-
-<div className="about-image" data-aos="fade-left">
-
-<img src={aboutus} alt="Client Meeting"/>
-
-</div>
-
-</div>
-
-</section>
-  )};
+    </section>
+  );
+};
 
 export default Aboutus;

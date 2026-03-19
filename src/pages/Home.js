@@ -24,10 +24,11 @@ import Reviews from "../components/Reviews";
 import WhyChooseUs from "../components/WhyChooseUs";
 import Info from "../components/Info";
 import HomePortfolio from "../components/HomePortfolio";
-// import ServiceHome from "../components/ServiceHome";
-// import HomeProducts from "../components/HomeProducts";
-import Aboutus from "../components/Aboutus"
-import Industries from "../components/Industries"
+/* import ServiceHome from "../components/ServiceHome";
+import HomeProducts from "../components/HomeProducts";
+ */
+import Aboutus from "../components/Aboutus";
+import Industries from "../components/Industries";
 
 const Home = () => {
 
