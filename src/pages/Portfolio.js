@@ -146,41 +146,44 @@ const Portfolio = () => {
       >
         <div className="container">
 
-          <div
-            className="stats-grid"
-            style={{
-              gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
-              gap: "30px",
-            }}
-          >
-            <div className="stat-item">
-              <h4 style={{ fontSize: "2.8rem", color: "var(--primary-color)" }}>
-                50+
-              </h4>
-              <p>Projects Completed</p>
-            </div>
+         <div
+  className="stats-grid"
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(4,1fr)",
+    gap: "30px",
+  }}
+>
 
-            <div className="stat-item">
-              <h4 style={{ fontSize: "2.8rem", color: "var(--primary-color)" }}>
-                30+
-              </h4>
-              <p>Happy Clients</p>
-            </div>
+  <div className="stat-item">
+    <h4 style={{ fontSize: "2.8rem", color: "var(--primary-color)" }}>
+      50+
+    </h4>
+    <p>Projects Completed</p>
+  </div>
 
-            <div className="stat-item">
-              <h4 style={{ fontSize: "2.8rem", color: "var(--primary-color)" }}>
-                20+
-              </h4>
-              <p>Team Members</p>
-            </div>
+  <div className="stat-item">
+    <h4 style={{ fontSize: "2.8rem", color: "var(--primary-color)" }}>
+      30+
+    </h4>
+    <p>Happy Clients</p>
+  </div>
 
-            <div className="stat-item">
-              <h4 style={{ fontSize: "2.8rem", color: "var(--primary-color)" }}>
-                10+
-              </h4>
-              <p>Years Experience</p>
-            </div>
-          </div>
+  <div className="stat-item">
+    <h4 style={{ fontSize: "2.8rem", color: "var(--primary-color)" }}>
+      20+
+    </h4>
+    <p>Team Members</p>
+  </div>
+
+  <div className="stat-item">
+    <h4 style={{ fontSize: "2.8rem", color: "var(--primary-color)" }}>
+      10+
+    </h4>
+    <p>Years Experience</p>
+  </div>
+
+</div>
 
         </div>
       </section>

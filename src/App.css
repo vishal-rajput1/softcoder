@@ -62,7 +62,35 @@ height:auto;
 object-fit:cover;
 }
 
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width:768px){
+  .portfolio-stats {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width:480px){
+  .portfolio-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
 /* ================= LAYOUT ================= */
 
 .container{
@@ -771,10 +799,11 @@ grid-template-columns:repeat(2,1fr);
 
 }
 
-@media(max-width:768px){
-
-.mobile-menu-toggle{
-display:block;
+@media (max-width: 1024px) {
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .nav-menu{
@@ -804,44 +833,65 @@ margin-top:20px;
 
 /* About us section  */
 
-.about-content,
-.why-choose-content,
-.contact-content{
-grid-template-columns:1fr;
+
+/* About us section  */
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 }
 
-.services-grid{
-grid-template-columns:1fr;
+/* IMAGE */
+.about-image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-.portfolio-grid{
-grid-template-columns:1fr;
+/* CONTENT */
+.about-content {
+  flex: 1;
 }
 
-.blog-grid{
-grid-template-columns:1fr;
+.about-tag {
+  color: #4f46e5;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
-.stats-grid{
-grid-template-columns:1fr;
+.about-desc {
+  margin: 15px 0;
+  color: #555;
 }
 
-.footer-content{
-grid-template-columns:1fr;
+/* HIGHLIGHTS */
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px;
+  margin-top: 20px;
 }
 
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-@media(max-width:480px){
-
-.hero-buttons{
-flex-direction:column;
+.highlight-icon {
+  color: #4f46e5;
 }
 
-.btn{
-width:100%;
-}
-
+/* MOBILE */
+@media (max-width: 768px) {
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 /* ===== REVIEWS SECTION ===== */
 
