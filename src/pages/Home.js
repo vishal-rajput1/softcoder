@@ -1,37 +1,19 @@
-import React from "react";
-import { COLORS } from "../theme/theme";
-import { 
-  FaCode, 
-  FaMobile, 
-  FaLaptopCode, 
-  FaBullhorn, 
-  FaShoppingCart,
-  FaCheckCircle,
-  FaHeadset,
-  FaPalette,
-  FaDollarSign,
-  FaFilter,
-  FaEnvelope,
-  FaPhone,
-  FaMapMarkerAlt,
-  FaWhatsapp
-} from 'react-icons/fa';
 
+import { COLORS } from "../theme/theme";
+import { FaWhatsapp} from 'react-icons/fa';
 import HeroCarousel from "../components/HeroCarousel";
 import CompanySection from "../components/CompanySection";
 import AIFeatures from "../components/AIFeatures";
 import Reviews from "../components/Reviews";
 import WhyChooseUs from "../components/WhyChooseUs";
-import Info from "../components/Info";
 import HomePortfolio from "../components/HomePortfolio";
-/* import ServiceHome from "../components/ServiceHome";
-import HomeProducts from "../components/HomeProducts";
- */
 import Aboutus from "../components/Aboutus";
 import Industries from "../components/Industries";
-
+import React, { useEffect } from "react";
 const Home = () => {
-
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
 return (
 
 <div style={{background:COLORS.white}}>
