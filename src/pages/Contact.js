@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
 import { 
   FaEnvelope, 
   FaPhone, 
@@ -8,6 +8,9 @@ import {
 } from 'react-icons/fa';
 
 const Contact = () => {
+  useEffect(() => {
+      window.scrollTo(0, 0); 
+    }, []);
 
   const [formData, setFormData] = useState({
     name: '',

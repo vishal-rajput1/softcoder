@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
 import {
   FaCheckCircle,
@@ -13,8 +13,13 @@ import {
 import aboutus from "../assets/images/aboutus.png";
 import StudentTestimonials from "../components/StudentTestimonials";
 import FAQ from "../components/FAQ";
+import React, { useEffect } from "react";
 
 const About = () => {
+useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
+
   return (
     <div>
 
@@ -32,7 +37,7 @@ const About = () => {
         <div className="container">
 
           <h1 style={{fontSize:"42px",fontWeight:"700",marginBottom:"20px"}}>
-            About Softcoders
+            About Soft Coders
           </h1>
 
           <p style={{maxWidth:"700px",margin:"0 auto",opacity:"0.9"}}>
@@ -62,7 +67,7 @@ const About = () => {
               </h2>
 
               <p style={{marginBottom:"15px",color:"#555"}}>
-                Softcoders is a technology company focused on delivering
+                Soft Coders is a technology company focused on delivering
                 modern web applications, scalable software systems,
                 and digital transformation solutions.
               </p>

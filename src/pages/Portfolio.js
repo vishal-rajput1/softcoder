@@ -1,12 +1,15 @@
-import React from "react";
 
+import React, { useEffect } from "react";
 import kingsprinter from "../assets/images/kingsprinter.png";
 import hsfFoods from "../assets/images/hsffoods.png";
-import vyaapak from "../assets/images/vyaapak.png";
+import vyaapak from "../assets/images/Screenshot 2026-03-20 152159.png";
 import paryavaran from "../assets/images/paryavaran.png";
 import budTulips from "../assets/images/budtulips.png";
 
 const Portfolio = () => {
+  useEffect(() => {
+      window.scrollTo(0, 0); 
+    }, []);
 
   const portfolioItems = [
     {

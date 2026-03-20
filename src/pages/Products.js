@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import schoolERP1 from "../assets/images/gurukulerp.png";
 import schoolERP2 from "../assets/images/gurukulerp2.png";
 import billing1 from "../assets/images/billingsoftware1.jpeg";
@@ -11,26 +11,29 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const Products = () => {
-  const [activeFilter, setActiveFilter] = useState("All");
-
+  useEffect(() => {
+      window.scrollTo(0, 0); 
+    }, []);
+  const [activeFilter] = useState("All");
+const navigate = useNavigate();
   const products = [
-    {
-      id: 1,
-      title: "GuruKul School ERP",
-      category: "School ERP",
-      images: [schoolERP1, schoolERP2],
-      description: `A complete school management ERP with Admin, Teacher, and Student panels. 
-      Manage attendance, exams, report cards, homework, notifications and more.`
-    },
-    {
-      id: 2,
-      title: "ShopKeeper Billing Software",
-      category: "Billing Software",
-      images: [billing1, billing2],
-      description: `Simple and powerful billing and inventory system designed for retail shops. 
-      Generate bills, manage stock, track sales and analyze reports easily.`
-    }
-  ];
+  {
+    id: 1,
+    title: "GuruKul School ERP",
+    category: "School ERP",
+    images: [schoolERP1, schoolERP2],
+    link: "http://www.gurukulerp.in/",
+    description: `A complete school management ERP...`
+  },
+  {
+    id: 2,
+    title: "ShopKeeper Billing Software",
+    category: "Billing Software",
+    images: [billing1, billing2],
+    link: "https://billingsoftware-iskt.onrender.com", // or external link if you have one
+    description: `Simple and powerful billing system...`
+  }
+];
 
   const filteredProducts =
     activeFilter === "All"
@@ -132,18 +135,6 @@ slidesPerView={1}
 
 <div>
 
-{/* <span
-style={{
-// background:"#000000",
-color:"#060101",
-padding:"5px 14px",
-borderRadius:"20px",
-fontSize:"13px"
-}}
->
-{product.category}
-</span> */}
-
 <h2 style={{ margin: "15px 0" }}>
 {product.title}
 </h2>
@@ -175,16 +166,23 @@ paddingLeft:"18px"
 {/* BUTTON */}
 
 <button
-style={{
-padding:"12px 26px",
-background:"#4f46e5",
-color:"#fff",
-border:"none",
-borderRadius:"8px",
-cursor:"pointer"
-}}
+  onClick={() => {
+    if (product.link.startsWith("http")) {
+      window.open(product.link, "_blank"); // external link
+    } else {
+      navigate(product.link); // internal page
+    }
+  }}
+  style={{
+    padding: "12px 26px",
+    background: "#4f46e5",
+    color: "#fff",
+    border: "none",
+    borderRadius: "8px",
+    cursor: "pointer"
+  }}
 >
-View More
+  View More
 </button>
 
 </div>

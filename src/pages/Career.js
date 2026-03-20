@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaWhatsapp, FaBriefcase, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 import { FaChartLine, FaLaptopCode, FaUsers, FaMoneyBillWave } from "react-icons/fa";
 
 const Career = () => {
+  useEffect(() => {
+      window.scrollTo(0, 0); 
+    }, []);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -250,7 +253,7 @@ and meaningful digital solutions.
 
 <div className="section-title">
 <p className="subtitle">Why Join Us</p>
-<h2>Build Your Career With Softcoders</h2>
+<h2>Build Your Career With Soft Coders</h2>
 </div>
 
 <div className="services-grid">
