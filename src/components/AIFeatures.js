@@ -12,9 +12,16 @@ import {
 
 import CountUp from "react-countup";
 import { TypeAnimation } from "react-type-animation";
-import {COLORS} from "../theme/theme"
+import { useInView } from "react-intersection-observer";
+
+import { COLORS } from "../theme/theme";
 
 const AIFeatures = () => {
+
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.5
+  });
 
   const features = [
     { icon: <FaBrain />, title: "Seamless AI & Human Collaboration" },
@@ -42,7 +49,6 @@ const AIFeatures = () => {
 
           {/* FEATURES */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
             {features.map((item, index) => (
               <div key={index} className="flex items-center gap-4">
 
@@ -59,91 +65,167 @@ const AIFeatures = () => {
 
               </div>
             ))}
-
           </div>
 
           {/* CODE BOX */}
           <div
+            ref={ref}
             className="p-5 md:p-6 rounded-lg font-mono text-xs md:text-sm overflow-auto"
             style={{
               background: COLORS.dark,
               color: "#00ff9c"
             }}
           >
-
             <pre>
+              {inView && (
+                <TypeAnimation
+  key={inView}
+  sequence={[
+`// AI Platform Core Service
 
-<TypeAnimation
-sequence={[
-`const axios = require('axios');
+import axios from "axios";
 
-class AIService {
-  constructor(baseURL) {
-    this.client = axios.create({ baseURL });
+class AIPlatform {
+  constructor() {
+    this.client = axios.create({
+      baseURL: "https://api.yourai.com",
+      timeout: 5000
+    });
   }
 }
 
-async fetchData(endpoint){
-  const response = await this.client.get(endpoint);
+`,
+3000,
+
+`// AI Talent Deployment Engine
+
+async deployTalent(role, requirements) {
+  const response = await this.client.post("/talent/deploy", {
+    role,
+    requirements,
+    aiOptimized: true
+  });
+
   return response.data;
 }
+
 `,
-2000
-]}
-speed={60}
-cursor={true}
-repeat={Infinity}
-style={{ whiteSpace: "pre-line", display: "block" }}
+4000,
+
+`// Smart Workflow Automation
+
+async runWorkflow(workflowId, payload) {
+  const response = await this.client.post("/workflow/run", {
+    workflowId,
+    payload,
+    realtime: true
+  });
+
+  return response.data;
+}
+
+`,
+4000,
+
+`// AI Product Prototyping Engine
+
+async generatePrototype(idea) {
+  const response = await this.client.post("/prototype/generate", {
+    idea,
+    mode: "rapid-ai"
+  });
+
+  return response.data;
+}
+
+`,
+4000,
+
+`// Real-time Analytics Dashboard
+
+async getInsights(projectId) {
+  const response = await this.client.get(\`/analytics/\${projectId}\`);
+
+  return {
+    performance: response.data.performance,
+    engagement: response.data.engagement,
+    aiScore: response.data.aiScore
+  };
+}
+
+`,
+4000,
+
+`// Initialize AI Platform
+
+const ai = new AIPlatform();
+
+(async () => {
+  const prototype = await ai.generatePrototype("AI SaaS platform");
+  const talent = await ai.deployTalent("Full Stack AI Engineer", {
+    experience: "5+ years",
+    stack: ["React", "Node", "AI"]
+  });
+
+  const workflow = await ai.runWorkflow("auto-deploy", {
+    projectId: prototype.id
+  });
+
+  console.log("🚀 AI System Ready", {
+    prototype,
+    talent,
+    workflow
+  });
+})();
+`,
+8000
+  ]}
+  speed={60}
+  cursor={true}
+  repeat={Infinity} // loops after full sequence (~35 sec)
+  style={{ whiteSpace: "pre-line", display: "block" }}
 />
-
+              )}
             </pre>
-
           </div>
 
         </div>
 
         {/* STATS */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center mt-16">
+        <div className="flex justify-center mt-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center max-w-3xl w-full">
 
-          <div>
-            <h3
-              className="text-3xl md:text-4xl font-bold mb-2"
-              style={{ color: COLORS.dark }}
-            >
-              <CountUp end={350} duration={5} />+
-            </h3>
-            <p className="text-gray-500">Clients</p>
-          </div>
+            <div className="flex flex-col items-center justify-center">
+              <h3
+                className="text-3xl md:text-4xl font-bold mb-2"
+                style={{ color: COLORS.dark }}
+              >
+                <CountUp end={350} duration={3} />+
+              </h3>
+              <p className="text-gray-500">Clients</p>
+            </div>
 
-          <div>
-            <h3
-              className="text-3xl md:text-4xl font-bold mb-2"
-              style={{ color: COLORS.dark }}
-            >
-              <CountUp end={15} duration={5} />+
-            </h3>
-            <p className="text-gray-500">Countries</p>
-          </div>
+            <div className="flex flex-col items-center justify-center">
+              <h3
+                className="text-3xl md:text-4xl font-bold mb-2"
+                style={{ color: COLORS.dark }}
+              >
+                <CountUp end={200} duration={3} />+
+              </h3>
+              <p className="text-gray-500">Projects</p>
+            </div>
 
-          <div>
-            <h3
-              className="text-3xl md:text-4xl font-bold mb-2"
-              style={{ color: COLORS.dark }}
-            >
-              <CountUp end={95} duration={5} />%
-            </h3>
-            <p className="text-gray-500">Repeat Business</p>
-          </div>
-          <div>
-            <h3
-              className="text-3xl md:text-4xl font-bold mb-2"
-              style={{ color: COLORS.dark }}
-            >
-              <CountUp end={20000} duration={5} separator="," />+
-            </h3>
-            <p className="text-gray-500">Hours of Code</p>
-          </div>
+            <div className="flex flex-col items-center justify-center">
+              <h3
+                className="text-3xl md:text-4xl font-bold mb-2"
+                style={{ color: COLORS.dark }}
+              >
+                <CountUp end={100} duration={3} />%
+              </h3>
+              <p className="text-gray-500">Client Satisfaction</p>
+            </div>
 
+          </div>
         </div>
 
       </div>

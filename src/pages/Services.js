@@ -15,7 +15,7 @@ import {
   FaChartLine
 } from "react-icons/fa";
 
-import aboutus from "../assets/images/aboutus.png";
+/* import aboutus from "../assets/images/aboutus.png"; */
 /* 
 //data
 import servicesData from "../data/servicesData"; */
