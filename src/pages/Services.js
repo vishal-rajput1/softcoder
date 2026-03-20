@@ -15,10 +15,6 @@ import {
   FaChartLine
 } from "react-icons/fa";
 import React, { useEffect } from "react";
-import aboutus from "../assets/images/aboutus.png";
-/* 
-//data
-import servicesData from "../data/servicesData"; */
 
 const Services = () => {
   useEffect(() => {
