@@ -10,7 +10,7 @@ import {
   FaLightbulb
 } from "react-icons/fa";
 
-import aboutus from "../assets/images/aboutus.png";
+/* import aboutus from "../assets/images/aboutus.png"; */
 import StudentTestimonials from "../components/StudentTestimonials";
 import FAQ from "../components/FAQ";
 import React, { useEffect } from "react";
