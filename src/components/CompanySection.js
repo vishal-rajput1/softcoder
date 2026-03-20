@@ -27,7 +27,7 @@ const CompanySection = () => {
             </p>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-              Softcoders is your trusted source in IT services and support
+              Soft Coders is your trusted source in IT services and support
             </h2>
           </div>
 
@@ -36,10 +36,9 @@ const CompanySection = () => {
             className="text-lg leading-relaxed"
             style={{ color: `${COLORS.white}CC` }}
           >
-            Softcoders is a privately owned IT Support and IT Services business
-            formed in 1988. Today we’re proud to boast a strong team of IT
-            engineers who thrive on rolling up their sleeves and solving your
-            IT problems and meeting your business needs.
+            Soft Coders is a trusted IT solutions provider focused on delivering smart, scalable, and result-driven digital services. Our team combines technical expertise with creative thinking to build powerful software, websites, and applications tailored to your business goals.
+
+We are committed to quality, performance, and long-term support, ensuring that every solution we deliver adds real value to your business.
           </div>
 
         </div>
@@ -121,7 +120,7 @@ const CompanySection = () => {
   className="text-xl font-semibold mb-2 whitespace-nowrap"
   style={{ color: COLORS.dark }}
 >
-  Why partner with us
+  Why choose us
 </h3>
 
               <Link
