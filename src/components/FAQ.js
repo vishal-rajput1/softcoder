@@ -5,7 +5,7 @@ const FAQ = () => {
 
  const faqs = [
   {
-    question: "What services does Softcoders provide?",
+    question: "What services does Soft Coders provide?",
     answer:
       "Softcoders offers a wide range of IT services including Website Development, Mobile App Development, UI/UX Design, Digital Marketing, and E-commerce Solutions."
   },
@@ -40,7 +40,7 @@ const FAQ = () => {
       "We use modern technologies like React, Node.js, Python, MongoDB, and other latest frameworks to build scalable and efficient solutions."
   },
   {
-    question: "How can I contact Softcoders for a project?",
+    question: "How can I contact Soft Coders for a project?",
     answer:
       "You can contact us through our website, email, or WhatsApp. Our team will get back to you quickly to discuss your requirements."
   }

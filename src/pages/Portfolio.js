@@ -41,11 +41,11 @@ const Portfolio = () => {
     },
     {
       id: 4,
-      title: "Vyaapak Information System",
+      title: "Vyaapak Prints",
       category: "E-commerce",
       image: vyaapak,
       description:
-        "Advanced digital solution providing online services with secure payment and data management system.",
+        "vyapakprint is a new initiative to provide better service in the area of designing, printing, and advertisements.",
     },
     {
       id: 5,
