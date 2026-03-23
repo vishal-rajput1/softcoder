@@ -14,6 +14,12 @@ import {
 import StudentTestimonials from "../components/StudentTestimonials";
 import FAQ from "../components/FAQ";
 import React, { useEffect } from "react";
+import about from "../assets/images/aboutpage.jpg";
+
+import Hero from "../pages/Hero";
+import heroimg from "../assets/images/herobg.jpg";
+
+
 
 const About = () => {
 useEffect(() => {
@@ -25,7 +31,16 @@ useEffect(() => {
 
       {/* HERO */}
 
-      <section
+<Hero
+  title="About Soft Coders"
+  subtitle="We build powerful digital solutions that help businesses grow, automate processes, and scale faster with modern technologies."
+  image={heroimg}
+  initial={{ scale: 1.1 }}
+animate={{ scale: 1 }}
+
+/>
+
+{/*       <section
         style={{
           padding: "140px 0 100px",
           background:
@@ -46,7 +61,7 @@ useEffect(() => {
           </p>
 
         </div>
-      </section>
+      </section> */}
 
 
       {/* ABOUT SECTION */}
@@ -119,7 +134,7 @@ useEffect(() => {
             <div>
 
       <img
-  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+  src = {about}
   alt="coding workspace"
   style={{
     width: "100%",
@@ -152,12 +167,12 @@ useEffect(() => {
           <div className="grid md:grid-cols-4 gap-8 text-center">
 
             <div>
-              <h2 style={{color:"#4f46e5"}}>120+</h2>
+              <h2 style={{color:"#4f46e5"}}>200+</h2>
               <p>Projects Completed</p>
             </div>
 
             <div>
-              <h2 style={{color:"#4f46e5"}}>80+</h2>
+              <h2 style={{color:"#4f46e5"}}>350+</h2>
               <p>Happy Clients</p>
             </div>
 

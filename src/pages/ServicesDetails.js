@@ -1,10 +1,13 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import servicesData from "../data/servicesData";
-
+import { useEffect } from "react";
 const ServiceDetails = () => {
 
   const { serviceName } = useParams();
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
 
 const service = servicesData.find(
   (s) => s.slug === serviceName

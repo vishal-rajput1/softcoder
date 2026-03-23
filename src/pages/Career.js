@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { FaWhatsapp, FaBriefcase, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 import { FaChartLine, FaLaptopCode, FaUsers, FaMoneyBillWave } from "react-icons/fa";
 
+import Hero from "../pages/Hero";
+import heroimg from "../assets/images/herobg.jpg";
+
 const Career = () => {
   useEffect(() => {
       window.scrollTo(0, 0); 
@@ -231,7 +234,7 @@ box-shadow:0 10px 20px rgba(0,0,0,0.2);
 
 {/* HERO */}
 
-<section className="hero">
+{/* <section className="hero">
 <div className="container">
 
 <h1>Career Opportunities</h1>
@@ -242,9 +245,16 @@ and meaningful digital solutions.
 </p>
 
 </div>
-</section>
+</section> */}
 
-
+<Hero
+  title="Career Opportunities"
+  subtitle="Join our growing team and work on exciting technologies, innovative projects,
+and meaningful digital solutions."
+  image={heroimg}
+  initial={{ scale: 1.1 }}
+animate={{ scale: 1 }}
+/>
 
 {/* WHY JOIN */}
 

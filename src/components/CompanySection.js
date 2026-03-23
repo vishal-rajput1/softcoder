@@ -3,7 +3,7 @@ import { COLORS } from "../theme/theme";
 
 import { Link } from "react-router-dom";
 import img1 from "../assets/images/slide1.avif";
-import img2 from "../assets/images/slide2.avif";
+import img2 from "../assets/images/aboutpage.jpg"  ;
 import img3 from "../assets/images/slide3.avif";
 
 const CompanySection = () => {

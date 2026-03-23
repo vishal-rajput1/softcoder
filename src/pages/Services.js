@@ -16,6 +16,10 @@ import {
 } from "react-icons/fa";
 import React, { useEffect } from "react";
 
+import Hero from "../pages/Hero";
+import heroimg from "../assets/images/herobg.jpg";
+
+
 const Services = () => {
   useEffect(() => {
       window.scrollTo(0, 0); 
@@ -125,7 +129,7 @@ const Services = () => {
 
       {/* HERO */}
 
-      <section
+      {/* <section
         className="hero"
         style={{
           minHeight: "60vh",
@@ -153,7 +157,17 @@ const Services = () => {
           </div>
 
         </div>
-      </section>
+      </section> */}
+
+           <Hero
+  title="Premium Digital Services"
+  subtitle="We help businesses build powerful digital products,
+            improve online presence, and scale faster with modern technology."
+  image={heroimg}
+  initial={{ scale: 1.1 }}
+animate={{ scale: 1 }}
+/>
+
 
 
       {/* SERVICES */}

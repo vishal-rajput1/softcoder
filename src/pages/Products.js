@@ -10,6 +10,9 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
+import Hero from "../pages/Hero";
+import heroimg from "../assets/images/herobg.jpg";
+
 const Products = () => {
   useEffect(() => {
       window.scrollTo(0, 0); 
@@ -45,7 +48,7 @@ const navigate = useNavigate();
 
       {/* HERO */}
 
-      <section
+     {/*  <section
         className="hero"
         style={{
           minHeight: "60vh",
@@ -65,7 +68,16 @@ const navigate = useNavigate();
           </p>
 
         </div>
-      </section>
+      </section> */}
+
+      <Hero
+  title="Our Products"
+  subtitle="Powerful software solutions built to simplify school management
+            and business operations."
+  image={heroimg}
+  initial={{ scale: 1.1 }}
+animate={{ scale: 1 }}
+/>
 
 {/* PRODUCTS */}
 
