@@ -15,10 +15,10 @@ import {
   FaChartLine
 } from "react-icons/fa";
 import React, { useEffect } from "react";
-import aboutus from "../assets/images/aboutus.png";
-/* 
-//data
-import servicesData from "../data/servicesData"; */
+
+import Hero from "../pages/Hero";
+import heroimg from "../assets/images/herobg.jpg";
+
 
 const Services = () => {
   useEffect(() => {
@@ -129,7 +129,7 @@ const Services = () => {
 
       {/* HERO */}
 
-      <section
+      {/* <section
         className="hero"
         style={{
           minHeight: "60vh",
@@ -157,7 +157,17 @@ const Services = () => {
           </div>
 
         </div>
-      </section>
+      </section> */}
+
+           <Hero
+  title="Premium Digital Services"
+  subtitle="We help businesses build powerful digital products,
+            improve online presence, and scale faster with modern technology."
+  image={heroimg}
+  initial={{ scale: 1.1 }}
+animate={{ scale: 1 }}
+/>
+
 
 
       {/* SERVICES */}

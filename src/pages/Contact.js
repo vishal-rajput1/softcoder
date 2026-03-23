@@ -7,6 +7,10 @@ import {
   // FaClock
 } from 'react-icons/fa';
 
+import Hero from "../pages/Hero";
+import heroimg from "../assets/images/herobg.jpg";
+
+
 const Contact = () => {
   useEffect(() => {
       window.scrollTo(0, 0); 
@@ -157,15 +161,23 @@ box-shadow:0 8px 18px rgba(0,0,0,0.15);
 
       {/* HERO */}
 
-      <section className="hero" style={{ minHeight: '50vh', paddingTop: '140px' }}>
+{/*       <section className="hero" style={{ minHeight: '50vh', paddingTop: '140px' }}>
         <div className="container">
           <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
             <h1>Contact Us</h1>
             <p>Get in touch with us for any inquiries or project discussions</p>
           </div>
         </div>
-      </section>
+      </section> */}
 
+<Hero
+  title="Contact Us"
+  subtitle="Get in touch with us for any inquiries or project discussions."
+  image={heroimg}
+  initial={{ scale: 1.1 }}
+animate={{ scale: 1 }}
+
+/>
 
       {/* CONTACT SECTION */}
 

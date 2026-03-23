@@ -191,42 +191,7 @@ const ai = new AIPlatform();
 
         </div>
 
-        {/* STATS */}
-        <div className="flex justify-center mt-16">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center max-w-3xl w-full">
-
-            <div className="flex flex-col items-center justify-center">
-              <h3
-                className="text-3xl md:text-4xl font-bold mb-2"
-                style={{ color: COLORS.dark }}
-              >
-                <CountUp end={350} duration={3} />+
-              </h3>
-              <p className="text-gray-500">Clients</p>
-            </div>
-
-            <div className="flex flex-col items-center justify-center">
-              <h3
-                className="text-3xl md:text-4xl font-bold mb-2"
-                style={{ color: COLORS.dark }}
-              >
-                <CountUp end={200} duration={3} />+
-              </h3>
-              <p className="text-gray-500">Projects</p>
-            </div>
-
-            <div className="flex flex-col items-center justify-center">
-              <h3
-                className="text-3xl md:text-4xl font-bold mb-2"
-                style={{ color: COLORS.dark }}
-              >
-                <CountUp end={100} duration={3} />%
-              </h3>
-              <p className="text-gray-500">Client Satisfaction</p>
-            </div>
-
-          </div>
-        </div>
+       
 
       </div>
     </section>

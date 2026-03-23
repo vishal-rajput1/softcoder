@@ -10,6 +10,10 @@ import HomePortfolio from "../components/HomePortfolio";
 import Aboutus from "../components/Aboutus";
 import Industries from "../components/Industries";
 import React, { useEffect } from "react";
+
+import Hero from "../pages/Hero";
+import heroimg from "../assets/images/herobg.jpg";
+
 const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0); 

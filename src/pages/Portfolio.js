@@ -6,6 +6,9 @@ import vyaapak from "../assets/images/Screenshot 2026-03-20 152159.png";
 import paryavaran from "../assets/images/paryavaran.png";
 import budTulips from "../assets/images/budtulips.png";
 
+import Hero from "../pages/Hero";
+import heroimg from "../assets/images/herobg.jpg";
+
 const Portfolio = () => {
   useEffect(() => {
       window.scrollTo(0, 0); 
@@ -59,7 +62,7 @@ const Portfolio = () => {
 
       {/* HERO */}
 
-      <section
+{/*       <section
         className="hero"
         style={{
           minHeight: "60vh",
@@ -81,7 +84,15 @@ const Portfolio = () => {
           </p>
 
         </div>
-      </section>
+      </section> */}
+      <Hero
+  title="Our Portfolio"
+  subtitle=" Explore some of the digital products and platforms we’ve created
+            for our clients across different industries."
+  image={heroimg}
+  initial={{ scale: 1.1 }}
+animate={{ scale: 1 }}
+/>
 
       {/* PROJECTS */}
 

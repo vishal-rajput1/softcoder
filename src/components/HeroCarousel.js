@@ -5,7 +5,7 @@ import { COLORS } from "../theme/theme";
 import { Link } from "react-router-dom";
 
 import slide1 from "../assets/images/slide1.avif";
-import slide2 from "../assets/images/slide2.avif";
+import slide2 from "../assets/images/aboutpage.jpg";
 import slide3 from "../assets/images/slide3.avif";
 
 const slides = [
