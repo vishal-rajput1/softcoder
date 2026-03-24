@@ -62,29 +62,7 @@ const Portfolio = () => {
 
       {/* HERO */}
 
-{/*       <section
-        className="hero"
-        style={{
-          minHeight: "60vh",
-          paddingTop: "150px",
-          display: "flex",
-          alignItems: "center",
-          textAlign: "center",
-        }}
-      >
-        <div className="container">
 
-          <h1 style={{ marginBottom: "20px" }}>
-            Our Portfolio
-          </h1>
-
-          <p style={{ maxWidth: "700px", margin: "0 auto" }}>
-            Explore some of the digital products and platforms we’ve created
-            for our clients across different industries.
-          </p>
-
-        </div>
-      </section> */}
       <Hero
   title="Our Portfolio"
   subtitle=" Explore some of the digital products and platforms we’ve created
@@ -150,58 +128,7 @@ animate={{ scale: 1 }}
         </div>
       </section>
 
-      {/* STATS */}
-
-      <section
-        className="section"
-        style={{
-          background: "var(--light-color)",
-        }}
-      >
-        <div className="container">
-
-         <div
-  className="stats-grid"
-  style={{
-    display: "grid",
-    gridTemplateColumns: "repeat(4,1fr)",
-    gap: "30px",
-  }}
->
-
-  <div className="stat-item">
-    <h4 style={{ fontSize: "2.8rem", color: "var(--primary-color)" }}>
-      50+
-    </h4>
-    <p>Projects Completed</p>
-  </div>
-
-  <div className="stat-item">
-    <h4 style={{ fontSize: "2.8rem", color: "var(--primary-color)" }}>
-      30+
-    </h4>
-    <p>Happy Clients</p>
-  </div>
-
-  <div className="stat-item">
-    <h4 style={{ fontSize: "2.8rem", color: "var(--primary-color)" }}>
-      20+
-    </h4>
-    <p>Team Members</p>
-  </div>
-
-  <div className="stat-item">
-    <h4 style={{ fontSize: "2.8rem", color: "var(--primary-color)" }}>
-      10+
-    </h4>
-    <p>Years Experience</p>
-  </div>
-
-</div>
-
-        </div>
-      </section>
-
+      
       {/* CTA */}
 
       <section className="section">
