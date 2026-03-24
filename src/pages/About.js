@@ -7,7 +7,8 @@ import {
   FaDollarSign,
   FaUsers,
   FaAward,
-  FaLightbulb
+  FaLightbulb,
+  FaProjectDiagram, FaClock 
 } from "react-icons/fa";
 
 /* import aboutus from "../assets/images/aboutus.png"; */
@@ -18,6 +19,8 @@ import about from "../assets/images/aboutpage.jpg";
 
 import Hero from "../pages/Hero";
 import heroimg from "../assets/images/herobg.jpg";
+
+import CountUp from "react-countup";
 
 
 
@@ -153,45 +156,63 @@ animate={{ scale: 1 }}
       </section>
 
 
-      {/* STATS */}
 
-      <section
-        style={{
-          padding:"70px 0",
-          background:"#f8fafc"
-        }}
-      >
 
-        <div className="container">
+{/*  STATS */} 
 
-          <div className="grid md:grid-cols-4 gap-8 text-center">
+<section
+  style={{
+    padding: "80px 0",
+    background: "#f8fafc"
+  }}
+>
+  <div className="container flex justify-center">
 
-            <div>
-              <h2 style={{color:"#4f46e5"}}>200+</h2>
-              <p>Projects Completed</p>
-            </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl w-full">
 
-            <div>
-              <h2 style={{color:"#4f46e5"}}>350+</h2>
-              <p>Happy Clients</p>
-            </div>
+      {/* CARD 1 */}
+      <div className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-xl hover:-translate-y-2 transition duration-300">
 
-            <div>
-              <h2 style={{color:"#4f46e5"}}>6+</h2>
-              <p>Years Experience</p>
-            </div>
+        <FaProjectDiagram size={30} className="mx-auto mb-4 text-indigo-600" />
 
-            <div>
-              <h2 style={{color:"#4f46e5"}}>12+</h2>
-              <p>Team Members</p>
-            </div>
+        <h2 className="text-3xl font-bold text-indigo-600">
+          <CountUp end={200} duration={3} />+
+        </h2>
 
-          </div>
+        <p className="text-gray-500 mt-2">Projects Completed</p>
 
-        </div>
+      </div>
 
-      </section>
+      {/* CARD 2 */}
+      <div className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-xl hover:-translate-y-2 transition duration-300">
 
+        <FaUsers size={30} className="mx-auto mb-4 text-indigo-600" />
+
+        <h2 className="text-3xl font-bold text-indigo-600">
+          <CountUp end={350} duration={3} />+
+        </h2>
+
+        <p className="text-gray-500 mt-2">Happy Clients</p>
+
+      </div>
+
+      {/* CARD 3 */}
+      <div className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-xl hover:-translate-y-2 transition duration-300">
+
+        <FaClock size={30} className="mx-auto mb-4 text-indigo-600" />
+
+        <h2 className="text-3xl font-bold text-indigo-600">
+          <CountUp end={6} duration={3} />+
+        </h2>
+
+        <p className="text-gray-500 mt-2">Years Experience</p>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
       {/* VALUES */}
 
