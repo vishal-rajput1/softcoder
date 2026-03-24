@@ -15,7 +15,7 @@ import {
   FaChevronDown
 } from "react-icons/fa";
 
-import softcoders from "../assets/images/sclogo.avif";
+import softcoders from "../assets/images/Soft Coders Web Logo.png";
 import { COLORS } from "../theme/theme";
 
 const Header = () => {
@@ -53,46 +53,91 @@ style={{background:COLORS.dark}}
 >
 
 <motion.div
-className="flex gap-12 whitespace-nowrap items-center"
-style={{color:COLORS.white}}
-animate={{x:["0%","-50%"]}}
-transition={{repeat:Infinity,duration:25,ease:"linear"}}
+  className="flex gap-12 whitespace-nowrap items-center"
+  style={{ color: COLORS.white }}
+  animate={{ x: ["0%", "-50%"] }}
+  transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
 >
 
-<Link to="/career" className="flex items-center gap-2">
-<FaBriefcase style={{color:COLORS.primary}}/>
-We Are Hiring Developers
-</Link>
+  {/* 🔥 DUPLICATE CONTENT WRAPPER */}
+  <div className="flex gap-12 items-center">
 
-<Link to="/services" className="flex items-center gap-2">
-<FaLaptopCode style={{color:COLORS.primary}}/>
-Web Development • Mobile Apps • UI/UX
-</Link>
+    <Link to="/career" className="flex items-center gap-2">
+      <FaBriefcase style={{ color: COLORS.primary }} />
+      We Are Hiring Developers
+    </Link>
 
-<Link to="/portfolio" className="flex items-center gap-2">
-<FaProjectDiagram style={{color:COLORS.primary}}/>
-100+ Successful Projects Delivered
-</Link>
+    <Link to="/services" className="flex items-center gap-2">
+      <FaLaptopCode style={{ color: COLORS.primary }} />
+      Web Development • Mobile Apps • UI/UX
+    </Link>
 
-<a href="mailto:Info@softcoders.in" className="flex items-center gap-2">
-<FaEnvelope style={{color:COLORS.primary}}/>
-Info@softcoders.in
-</a>
+    <Link to="/portfolio" className="flex items-center gap-2">
+      <FaProjectDiagram style={{ color: COLORS.primary }} />
+      100+ Successful Projects Delivered
+    </Link>
 
-<a href="tel:+918295000455" className="flex items-center gap-2">
-<FaPhone style={{color:COLORS.primary}}/>
-+91-8295000455
-</a>
+    <a href="mailto:Info@softcoders.in" className="flex items-center gap-2">
+      <FaEnvelope style={{ color: COLORS.primary }} />
+      Info@softcoders.in
+    </a>
 
-<Link to="/about" className="flex items-center gap-2">
-<FaUsers style={{color:COLORS.primary}}/>
-Trusted by Businesses Worldwide
-</Link>
+    <a href="tel:+918295000455" className="flex items-center gap-2">
+      <FaPhone style={{ color: COLORS.primary }} />
+      +91-8295000455
+    </a>
 
-<Link to="/contact" className="flex items-center gap-2">
-<FaBullhorn style={{color:COLORS.primary}}/>
-Get Your Website Built Today
-</Link>
+    <Link to="/about" className="flex items-center gap-2">
+      <FaUsers style={{ color: COLORS.primary }} />
+      Trusted by Businesses Worldwide
+    </Link>
+
+    <Link to="/contact" className="flex items-center gap-2">
+      <FaBullhorn style={{ color: COLORS.primary }} />
+      Get Your Website Built Today
+    </Link>
+
+  </div>
+
+  {/* 🔥 DUPLICATE AGAIN */}
+  <div className="flex gap-12 items-center">
+
+    <Link to="/career" className="flex items-center gap-2">
+      <FaBriefcase style={{ color: COLORS.primary }} />
+      We Are Hiring Developers
+    </Link>
+
+    <Link to="/services" className="flex items-center gap-2">
+      <FaLaptopCode style={{ color: COLORS.primary }} />
+      Web Development • Mobile Apps • UI/UX
+    </Link>
+
+    <Link to="/portfolio" className="flex items-center gap-2">
+      <FaProjectDiagram style={{ color: COLORS.primary }} />
+      100+ Successful Projects Delivered
+    </Link>
+
+    <a href="mailto:Info@softcoders.in" className="flex items-center gap-2">
+      <FaEnvelope style={{ color: COLORS.primary }} />
+      Info@softcoders.in
+    </a>
+
+    <a href="tel:+918295000455" className="flex items-center gap-2">
+      <FaPhone style={{ color: COLORS.primary }} />
+      +91-8295000455
+    </a>
+
+    <Link to="/about" className="flex items-center gap-2">
+      <FaUsers style={{ color: COLORS.primary }} />
+      Trusted by Businesses Worldwide
+    </Link>
+
+    <Link to="/contact" className="flex items-center gap-2">
+      <FaBullhorn style={{ color: COLORS.primary }} />
+      Get Your Website Built Today
+    </Link>
+
+  </div>
 
 </motion.div>
 
@@ -108,15 +153,15 @@ backdropFilter:isScrolled ? "blur(10px)" : "none"
 }}
 >
 
-<div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+<div className="max-w-8xl mx-auto flex items-center  justify-between px-6 py-3">
 
 {/* LOGO */}
 
 <Link to="/">
-<img src={softcoders} alt="logo" className="h-10"/>
+<img src={softcoders} alt="logo" className="h-[64px] w-[300px]"/>
 </Link>
 
-{/* DESKTOP MENU */}
+{/* DESKTOP MENU */}  
 
 <ul className="hidden md:flex items-center gap-8 font-medium">
 

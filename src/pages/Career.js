@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaWhatsapp, FaBriefcase, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 import { FaChartLine, FaLaptopCode, FaUsers, FaMoneyBillWave } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 import Hero from "../pages/Hero";
 import heroimg from "../assets/images/herobg.jpg";
@@ -234,18 +235,6 @@ box-shadow:0 10px 20px rgba(0,0,0,0.2);
 
 {/* HERO */}
 
-{/* <section className="hero">
-<div className="container">
-
-<h1>Career Opportunities</h1>
-
-<p style={{maxWidth:"700px",margin:"auto"}}>
-Join our growing team and work on exciting technologies, innovative projects,
-and meaningful digital solutions.
-</p>
-
-</div>
-</section> */}
 
 <Hero
   title="Career Opportunities"
@@ -339,9 +328,9 @@ style={{textAlign:"left"}}
 
 <p>{job.description}</p>
 
-<a href="#apply" className="btn-primary">
-Apply Now
-</a>
+<Link to="/contact" className="btn-primary">
+  Apply Now
+</Link>
 
 </div>
 ))}

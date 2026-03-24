@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+
 import schoolERP1 from "../assets/images/gurukulerp.png";
 import schoolERP2 from "../assets/images/gurukulerp2.png";
+import schoolERPlogo from "../assets/images/Gurukul erp img logo.jpg.jpeg";
+
 import billing1 from "../assets/images/billingsoftware1.jpeg";
 import billing2 from "../assets/images/billingsoftware2.jpeg";
+import billinglogo from "../assets/images/bt erp img logo.jpg.jpeg" 
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -24,7 +28,7 @@ const navigate = useNavigate();
     id: 1,
     title: "GuruKul School ERP",
     category: "School ERP",
-    images: [schoolERP1, schoolERP2],
+    images: [schoolERPlogo ,schoolERP1, schoolERP2],
     link: "http://www.gurukulerp.in/",
     description: `A complete school management ERP...`
   },
@@ -32,7 +36,7 @@ const navigate = useNavigate();
     id: 2,
     title: "ShopKeeper Billing Software",
     category: "Billing Software",
-    images: [billing1, billing2],
+    images: [billinglogo, billing1, billing2],
     link: "https://billingsoftware-iskt.onrender.com", // or external link if you have one
     description: `Simple and powerful billing system...`
   }
